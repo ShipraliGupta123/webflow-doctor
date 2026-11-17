@@ -8,7 +8,8 @@
 ## T0.2 — Kane CLI setup (16 Nov)
 - Installed `@testmuai/kane-cli` globally; logged in via `kane-cli login --oauth` (verified with `kane-cli whoami`).
 - Installed the Kane agent skill (`kane-cli install skill`) so Claude Code uses documented flags instead of guessing.
-- Smoke run: _pending / result here_
+- Smoke run: done 16 Nov (spike-run.ndjson). Failed on a stale expectation (example.com
+  heading changed) — which usefully exercised Kane's verdict/triage output. See T0.4.
 
 ## Kane CLI facts (from skill docs, pre-spike)
 - `run` / `testmd run` take `--agent` → NDJSON on stdout. First line is `stream_start`; terminal event is `run_end` (run) / `test_md_done` (testmd).
@@ -18,19 +19,56 @@
 - Test files must be named `*_test.md`. Designed tests carry an `assurance:` block linking them to requirements; hand-edits get adopted as the next design version → supports our hash-lock anti-cheat.
 - `kane-cli evidence verdict --policy <yaml>` can judge an evidence pack against quality gates → candidate to power part of our gate (T3.2). Decision pending.
 
-## T0.4 — Kane output spike
-_(pending — record: run_end fields, credits_consumed per run, evidence pack path + layout, whether RCA/fix-prompt text is machine-readable, exit codes observed)_
+## T0.4 — Kane output spike (16 Nov, spike-run.ndjson committed)
+- NDJSON event order: stream_start → recording_state → bifurcation → progress events
+  ({step,status,remark}, no "type") → coverage → run_end (terminal). CLI v0.10.4.
+- **RCA is machine-readable**: run_end.verdict = {root_cause, suggestion, bug_title, family,
+  category, severity, confidence, culprit_step, relevant_steps, agent_fault_assessment}.
+  Diagnosis (FR-3) builds directly on this; DOM-scraping fallback likely unnecessary.
+- verdict.family distinguishes site bugs from test/automation bugs — our loop should only
+  attempt fixes when Kane blames the site, not the test.
+- Cost: ~12.6 credits/run (incl. ~2.9 verdict triage) → 10k credits ≈ ~790 runs. 40-run cap fine.
+- Evidence pack: ~/.testmuai/kaneai/sessions/<session>/evidence/<id>.evidence
+  (paths also in run_end.session_dir / run_dir). Exit code 1 on failed assertion.
+- coverage event: skipped with "not_assurance_project" → only designed tests get coverage.
+- context.memory gives per-check extracted_value vs expected_value.
+- test_url: per-run shareable Test Manager dashboard link.
 
-## T0.5 — Webflow allow-list
-_(pending — for each fix type record: possible via Data API yes/no, exact endpoint + method, notes)_
-- ALT_TEXT:
-- CMS_LINK:
-- CUSTOM_CSS:
-- PAGE_META (optional):
-- Staging publish endpoint + how the staging-only guard works:
 
-## T0.6 — Demo site
-_(pending — site URL, the 3 planted bugs and where each lives, site-brief.md written)_
+## T0.5 — Webflow fix surfaces (17 Nov, confirmed while building via Webflow MCP)
+- **ALT_TEXT: possible.** Hero img inherits alt from asset `6afb70b5f814d42288f41ade`
+  (no element-level override) → fix = `PATCH /v2/assets/{assetId}` with `{altText}`.
+  Currently renders `alt=""` (bug 1 live).
+- **CMS_LINK: possible.** Fix = `PATCH /v2/collections/6afbef72ddd8aeed2da51e10/items/{itemId}`
+  (Travel Press item `6afbf088f45b0ed3cc52f6e5`, field slug `buy-link`), then publish items
+  via `POST .../items/publish`.
+- **CUSTOM_CSS: possible via registered scripts only.** Freeform custom-code API returns
+  404 on this plan (both page- and site-level). Registered scripts work:
+  `POST /v2/sites/{siteId}/registered_scripts/inline` to register, apply via
+  `PUT /v2/sites/{siteId}/custom_code`. Gotcha: the incremental add (`add_site_script`)
+  404s with "custom code block not found" until a block exists — the replace-all PUT
+  creates it. Fix = inject overriding CSS via a registered inline script (or remove the
+  offending script).
+- **Staging publish:** `POST /v2/sites/{siteId}/publish` with
+  `{publishToWebflowSubdomain: true}`. The demo site has NO custom domains, so publishes
+  physically cannot reach production. `webflow/client.ts` guard will additionally refuse
+  any call with a non-empty customDomains list.
+- Open item: re-verify these endpoints with the site API token — the MCP build used the
+  Claude↔Webflow connector's OAuth, the shipped app uses the token.
+
+## T0.6 — Demo site (17 Nov)
+- **Live:** https://webflow-doctor-demo.webflow.io
+  (site id `6afb6f3f015a6fa143a72dc5`, Home page id `6afb6f40015a6fa143a72dd0`)
+- Structure: hero (H1 "Brewed — small-batch coffee gear", image, `.cta-button` "Shop now"
+  → `#products`), CMS-bound products grid (3 items), "Get in touch" footer.
+- **Bug 1 (ALT_TEXT):** hero image renders `alt=""` (asset-inherited). Verified in DOM.
+- **Bug 2 (CMS_LINK):** Travel Press Buy → `https://webflow.com/404-this-page-is-gone`.
+  Verified: button lands on a 404.
+- **Bug 3 (CUSTOM_CSS):** registered script `ctahidebug` v0.0.1 in site header injects
+  `@media (max-width:390px){.cta-button{display:none}}`. Verified at 390px in DevTools.
+- Built with: CMS collection + items + hero by hand in Designer; collection list,
+  CMS bindings, footer, bug planting, and publish via the Webflow MCP connector.
+- `site-brief.md` written to match the intended (fixed) behavior.
 
 ## Stack
 - Node 20+ / TypeScript, Hono, vitest, Webflow Data API v2 via fetch, Anthropic SDK for fix planning — PRD defaults, no reason to swap.
