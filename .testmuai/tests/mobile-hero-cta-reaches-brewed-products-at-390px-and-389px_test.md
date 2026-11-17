@@ -1,7 +1,7 @@
 ---
 assurance:
   id: t-2
-  base: sha256:7c6929d8e3c99bff94c7ea0cbd4000bcf1b908d5a27eb445dc217ef3468ba057
+  base: sha256:5990e5f20d320d7fb4044b4354eb59ad70481bb083e4b4b0407e94b257cdfd4a
 ---
 # Mobile hero CTA reaches Brewed products at 390px and 389px
 

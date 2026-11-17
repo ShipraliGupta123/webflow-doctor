@@ -3,3 +3,11 @@ node_modules/
 *.log
 # kane-cli context store: shared through a location, never merged with git
 .context/
+
+# Kane per-run artifacts (large / regenerated each run)
+.testmuai/evidence/
+.testmuai/tests/output-*/
+# screen recordings
+*.mov
+*.mp4
+

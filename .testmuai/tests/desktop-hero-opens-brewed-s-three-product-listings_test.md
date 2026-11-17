@@ -1,7 +1,7 @@
 ---
 assurance:
   id: t-3
-  base: sha256:217881d7aaa4d15a047f8bb9bdb21222640870bb4a3e6bd2c691a134928f1aca
+  base: sha256:5fdcd4c1a3196c82dae87b4eba70e2fa864c01561021ef0836802ab7c8f5435c
 ---
 # Desktop hero opens Brewed's three product listings
 
