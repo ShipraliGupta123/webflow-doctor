@@ -2,7 +2,7 @@
 
 ## T0.1 — Hackathon logistics (16 Nov)
 - **Deadline: 19 Nov** (confirmed). Plan unchanged: feature freeze + submit Wed 18 Nov night, Thu 19 = buffer only.
-- **Credits:** 10,000 free per account, valid 1 month. Cached replays of passing tests cost 0 credits.
+- **Credits:** 10,000 free per account, valid 1 month. Luma page says cached replays of passing tests cost 0 credits (not yet verified).
 - **Free plan covers everything we need** — `evidence verdict`, `evidence validate`, `--policy-id`, `context ingest` — confirmed in hackathon Slack by the TestMu team (16 Nov).
 
 ## T0.2 — Kane CLI setup (16 Nov)
@@ -27,13 +27,12 @@
   Diagnosis (FR-3) builds directly on this; DOM-scraping fallback likely unnecessary.
 - verdict.family distinguishes site bugs from test/automation bugs — our loop should only
   attempt fixes when Kane blames the site, not the test.
-- Cost: ~12.6 credits/run (incl. ~2.9 verdict triage) → 10k credits ≈ ~790 runs. 40-run cap fine.
+- Cost: ~12.6 credits/run (incl. ~2.9 verdict triage) → 10k credits ≈ ~790 runs. 40-run cap fine.   Multi-step designed tests likely cost more per run — re-measure on the baseline.
 - Evidence pack: ~/.testmuai/kaneai/sessions/<session>/evidence/<id>.evidence
   (paths also in run_end.session_dir / run_dir). Exit code 1 on failed assertion.
 - coverage event: skipped with "not_assurance_project" → only designed tests get coverage.
 - context.memory gives per-check extracted_value vs expected_value.
 - test_url: per-run shareable Test Manager dashboard link.
-
 
 ## T0.5 — Webflow fix surfaces (17 Nov, confirmed while building via Webflow MCP)
 - **ALT_TEXT: possible.** Hero img inherits alt from asset `6afb70b5f814d42288f41ade`
@@ -63,12 +62,28 @@
   → `#products`), CMS-bound products grid (3 items), "Get in touch" footer.
 - **Bug 1 (ALT_TEXT):** hero image renders `alt=""` (asset-inherited). Verified in DOM.
 - **Bug 2 (CMS_LINK):** Travel Press Buy → `https://webflow.com/404-this-page-is-gone`.
-  Verified: button lands on a 404.
+    Verified 17 Nov: URL returns HTTP 404 (no redirect); the other two Buy links return 200.
 - **Bug 3 (CUSTOM_CSS):** registered script `ctahidebug` v0.0.1 in site header injects
   `@media (max-width:390px){.cta-button{display:none}}`. Verified at 390px in DevTools.
 - Built with: CMS collection + items + hero by hand in Designer; collection list,
   CMS bindings, footer, bug planting, and publish via the Webflow MCP connector.
 - `site-brief.md` written to match the intended (fixed) behavior.
+
+## T1.2 — Flows designed from site-brief.md (17 Nov)
+- Used Kane's assurance pipeline, no hand-written flows: `context ingest site-brief.md` →
+  3 use-cases → `design tests` per use-case → 5 designed tests in `.testmuai/tests/`.
+  Cost: ~63 credits for the whole requirements → tests stage.
+- Chose "work locally" (local `.context/` store, gitignored); test files are committed.
+- Tests live in `.testmuai/tests/` (Kane's default), NOT `tests/` — runner and the
+  hash-lock anti-cheat point there.
+- Use-cases must be approved before `design tests` runs; approved all ACs/scenarios/tests
+  with `kane-cli context review --approve <ids>` (the review screen's keys were awkward).
+- Steered Kane to split UC-2 into 3 scenarios (mobile CTA / alt text / desktop) so each
+  planted bug fails exactly one test — required for per-fix gating.
+- Kane's agent didn't write its alt-text removal back to disk for t-2/t-3; removed those
+  steps by hand (designed-test edits are adopted as the next design version).
+- Bug → test map: bug 2 → t-1 (Buy links), bug 3 → t-2 (mobile CTA 390/389px),
+  bug 1 → t-4 (alt text). t-3 (desktop) and t-5 (footer) are expected to pass.
 
 ## Stack
 - Node 20+ / TypeScript, Hono, vitest, Webflow Data API v2 via fetch, Anthropic SDK for fix planning — PRD defaults, no reason to swap.
