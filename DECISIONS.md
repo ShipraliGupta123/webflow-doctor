@@ -85,5 +85,31 @@
 - Bug → test map: bug 2 → t-1 (Buy links), bug 3 → t-2 (mobile CTA 390/389px),
   bug 1 → t-4 (alt text). t-3 (desktop) and t-5 (footer) are expected to pass.
 
+## T1.4 — Baseline findings & bug-3 swap (17 Nov)
+- **Kane web runs ignore `config set-window`.** Step screenshots are always 1920×1080 —
+  visible, headless, and after `set-window 390x844`. A test step saying "open at 390px"
+  is executed as a plain wait. Kane's mobile targets drive native apps only, not URLs.
+  → Mobile-viewport bugs are undetectable on this setup. (Asked in Slack.)
+- **Fallback (PRD rule 9 / Section 6 — change the bug, not the architecture):** bug 3 is now
+  `CUSTOM_CSS` hiding the footer contact link: registered script `footerhidebug` v0.0.1
+  injects `.footer-link{display:none}`. Old `ctahidebug` removed from the site (still
+  registered, not applied). Caught by t-5 (footer test).
+- **Mobile test t-2 excluded from the suite**: it can't run at 390px, so a pass would
+  claim coverage it doesn't have. Kept on disk; listed as a known limitation in README.
+- **Replay vs author:** a second run of a passed test *replays* recorded actions — ~0
+  credits, ~13s — but replay re-checks "present", not "visible" (a `display:none`
+  element passes). `--author` re-runs every step against the live page. → The loop
+  verifies the target flow with `--author`; the regression set can replay.
+- `--author` rewrites the `base:` hash in the test frontmatter → the hash-lock anti-cheat
+  must hash the step bodies, not the whole file.
+- **Assertion wording decides Kane's verdict family.** Checking the footer link's *href*
+  on a hidden link → `automation_bug` (Kane blamed itself). Rewording t-5 step 2 to
+  "assert the link is **visible** and points to mailto:…" → `application_issue`, with a
+  bug title and a fix suggestion. Assert what the visitor sees.
+- **Real cost:** one fresh 5-test suite run ≈ 239 credits (24–76 per test); a single
+  fresh test ≈ 30–40. Budget the loop per test, not per suite.
+- First run's Buy-links failure was Kane's own `agent_misstep` on a working link —
+  confirms we need FR-2's reruns plus the verdict.family check.
+
 ## Stack
 - Node 20+ / TypeScript, Hono, vitest, Webflow Data API v2 via fetch, Anthropic SDK for fix planning — PRD defaults, no reason to swap.

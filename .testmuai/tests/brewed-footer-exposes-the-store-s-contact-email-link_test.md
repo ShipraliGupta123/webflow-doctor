@@ -1,7 +1,7 @@
 ---
 assurance:
   id: t-5
-  base: sha256:19395954c98821c5e7b46921e918fa2f19c0e75511782c754fdd03bed9056ea9
+  base: sha256:0c5255cd8380716e78fed087ef72129240d4511e778e5fe5fa6d46737816b9cb
 ---
 # Brewed footer exposes the store's contact email link
 
@@ -13,4 +13,5 @@ At https://webflow-doctor-demo.webflow.io, reach the Brewed home page footer's c
 
 ## Step 2 @verifies ac-18
 
-In the Brewed home page footer's Get in touch area, inspect the contact email link as the visitor's way to initiate contact, then assert its href is mailto:hello@brewed.example.com.
+In the Brewed home page footer's Get in touch area, assert that a contact email link is visible to the visitor and that it points to mailto:hello@brewed.example.com.
+
