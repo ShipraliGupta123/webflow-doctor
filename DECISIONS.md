@@ -111,5 +111,25 @@
 - First run's Buy-links failure was Kane's own `agent_misstep` on a working link —
   confirms we need FR-2's reruns plus the verdict.family check.
 
+- **Confirmed red baseline (17 Nov, evidence/baseline-red/):** 4-test run, 3 red / 1 green
+  (~158 credits), then reruns after fixing test wording. Final state:
+  bug 2 → t-1 step 4 (Travel Press) `application_issue/navigation_defect` 0.99;
+  bug 1 → t-4 step 2 (empty alt) `application_issue/ui_data_defect` 0.98;
+  bug 3 → t-5 step 2 (hidden link) `application_issue/ui_state_mismatch` 0.94;
+  t-3 desktop passes.
+- **Rule for test wording: each assertion is one plain, observable fact.** Every test
+  first failed for the wrong reason until reworded: "href is mailto:…" → "link is
+  *visible* and points to…"; "alt is non-empty *and describes* the image" → split into
+  a DOM fact step + a judgement step; "destination *loads as a page* rather than a 404"
+  → Kane decomposed it into "a page *about Burr Grinder* is present" and falsely
+  failed 3× → "the page that opens does not show a 404 / page not found / error".
+- Burr Grinder's Buy link changed `webflow.com/pricing` → `webflow.com` (healthy control
+  data; turned out not to be the cause — the wording was).
+- **`verdict.family` is not stable for the same failure** (alt-text: application_issue
+  in one run, automation_bug in another). Gate decides on pass/fail + failing step;
+  family/root_cause are used only as diagnosis input, never as the verdict.
+- Event names differ by mode: `testrun_authored_member_end` (replay run) vs
+  `testrun_member_end` (`--author` run). Runner must accept both.
+
 ## Stack
 - Node 20+ / TypeScript, Hono, vitest, Webflow Data API v2 via fetch, Anthropic SDK for fix planning — PRD defaults, no reason to swap.

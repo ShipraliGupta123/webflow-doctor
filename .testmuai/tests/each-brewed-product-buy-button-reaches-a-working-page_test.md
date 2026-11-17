@@ -1,7 +1,7 @@
 ---
 assurance:
   id: t-1
-  base: sha256:7772ebcf63467e6c472bc02bbc38aafc3cfd5736a47404573e8f3d2b7ff152d3
+  base: sha256:20ef68cb8d35b549d64928d7bed8ffab4088cc8cac77565502ec6a6d590978f6
 ---
 # Each Brewed product Buy button reaches a working page
 
@@ -13,12 +13,12 @@ At https://webflow-doctor-demo.webflow.io, open the Brewed home page and reach i
 
 ## Step 2 @verifies ac-1, ac-2
 
-From the Brewed products section at https://webflow-doctor-demo.webflow.io, follow the Pour-over Kettle Buy button, then assert its destination loads as a page rather than a 404 or error page.
+From the Brewed products section at https://webflow-doctor-demo.webflow.io, click the Pour-over Kettle Buy button, then assert the page that opens does not show a 404, "page not found", or error message.
 
 ## Step 3 @verifies ac-1, ac-2
 
-From the Brewed products section at https://webflow-doctor-demo.webflow.io, follow the Burr Grinder Buy button, then assert its destination loads as a page rather than a 404 or error page.
+From the Brewed products section at https://webflow-doctor-demo.webflow.io, click the Burr Grinder Buy button, then assert the page that opens does not show a 404, "page not found", or error message.
 
 ## Step 4 @verifies ac-1, ac-2
 
-From the Brewed products section at https://webflow-doctor-demo.webflow.io, follow the Travel Press Buy button, then assert its destination loads as a page rather than a 404 or error page.
+From the Brewed products section at https://webflow-doctor-demo.webflow.io, click the Travel Press Buy button, then assert the page that opens does not show a 404, "page not found", or error message.
