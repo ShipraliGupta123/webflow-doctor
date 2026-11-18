@@ -20,6 +20,7 @@ export interface ParsedRun {
   authorDecisions: number; // 0 = every step was replayed from a recording
   credits: number;
   sessionId: string | undefined;
+  failedChecks: { query: string; expected: string; actual: string; analyzer: string }[];
 }
 
 export interface FlowResult extends ParsedRun {
@@ -77,7 +78,7 @@ export function parseTestmdOutput(ndjson: string): ParsedRun {
         ? 'fail'
         : 'error';
 
-  const verdict = failedRunEnd?.verdict;
+    const verdict = failedRunEnd?.verdict;
   const diagnosis: KaneDiagnosis | undefined =
     status === 'fail'
       ? {
@@ -91,6 +92,17 @@ export function parseTestmdOutput(ndjson: string): ParsedRun {
         }
       : undefined;
 
+  // The individual checks that failed: what Kane expected vs what it actually saw.
+  const memory: Record<string, any> = failedRunEnd?.context?.memory ?? {};
+  const failedChecks = Object.values(memory)
+    .filter((m: any) => typeof m?.reasoning === 'string' && m.reasoning.includes('FAIL'))
+    .map((m: any) => ({
+      query: String(m.condition ?? m.query ?? ''),
+      expected: String(m.expected_value ?? ''),
+      actual: String(m.extracted_value ?? ''),
+      analyzer: String(m.analyzer_type ?? ''),
+    }));
+
   return {
     status,
     durationMs: Math.round(Number(done?.duration_s ?? 0) * 1000),
@@ -100,6 +112,7 @@ export function parseTestmdOutput(ndjson: string): ParsedRun {
     authorDecisions: Number(summary?.steps?.author_decisions ?? 0),
     credits,
     sessionId: done?.session_id,
+    failedChecks,
   };
 }
 
@@ -153,10 +166,12 @@ export async function runWithRetries(
     rawRuns.push(rawNdjson);
     credits += result.credits;
     last = result;
-    if (result.status === 'pass') break;                    // passed — done
-    if (result.diagnosis?.confirmedSiteBug === true) break; // real site bug — rerunning wastes credits
+    if (result.status === 'pass') break; // passed — done
+    const preciseFailure = result.failedChecks.some((c) => ['title', 'url'].includes(c.analyzer));
+    if (result.diagnosis?.confirmedSiteBug === true || preciseFailure) break; // real failure — rerunning wastes credits
   }
 
   return { result: { ...last!, attempts: rawRuns.length, credits }, rawRuns };
 }
+
 

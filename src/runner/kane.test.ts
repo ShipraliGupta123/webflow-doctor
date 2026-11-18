@@ -39,4 +39,13 @@ describe('parseTestmdOutput', () => {
     const r = parseTestmdOutput('{"type":"stream_start"}\nnot json at all\n');
     expect(r.status).toBe('error');
   });
+
+  it('captures the measured value of a precise title check', () => {
+    const r = parseTestmdOutput(fixture('fail-title-precise.ndjson'));
+    expect(r.status).toBe('fail');
+    expect(r.failedChecks).toContainEqual(
+      expect.objectContaining({ analyzer: 'title', actual: 'Untitled', expected: 'Brewed — small-batch coffee gear' }),
+    );
+  });
+
 });

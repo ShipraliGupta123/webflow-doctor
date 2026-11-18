@@ -31,4 +31,10 @@ export const SUITE: SuiteTest[] = [
     path: '.testmuai/tests/brewed-footer-exposes-the-store-s-contact-email-link_test.md',
     weight: 1,
   },
+  {
+    id: 't-6',
+    name: 'Home page browser title',
+    path: '.testmuai/tests/brewed-home-page-browser-title-matches-the-specified-title_test.md',
+    weight: 2,
+  }
 ];

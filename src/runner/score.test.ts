@@ -6,7 +6,8 @@ import { SUITE } from './suite.js';
 const flow = (weight: number, status: FlowResult['status']): FlowResult =>
   ({ id: 'x', name: 'x', weight, attempts: 1, status, durationMs: 0, failedStep: undefined,
      failureMessage: undefined, diagnosis: undefined, authorDecisions: 0, credits: 0,
-     sessionId: undefined });
+          sessionId: undefined, failedChecks: [] });
+
 
 describe('score', () => {
   it('matches the red baseline: only the weight-3 desktop test passes', () => {
@@ -51,4 +52,15 @@ describe('runWithRetries', () => {
     expect(result.attempts).toBe(3);
     expect(result.status).toBe('fail');
   });
+
+  it('does not rerun a precise title failure even when Kane blames itself', async () => {
+    const run = fake([{
+      status: 'fail',
+      diagnosis: { confirmedSiteBug: false } as any,
+      failedChecks: [{ query: 'title', expected: 'Brewed', actual: 'Untitled', analyzer: 'title' }],
+    }]);
+    const { result } = await runWithRetries(test, { author: true }, 3, run);
+    expect(result.attempts).toBe(1);
+  });
+
 });
