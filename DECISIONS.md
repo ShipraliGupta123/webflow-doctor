@@ -131,5 +131,18 @@
 - Event names differ by mode: `testrun_authored_member_end` (replay run) vs
   `testrun_member_end` (`--author` run). Runner must accept both.
 
+## T1.1 / T1.3 — Runner & scoring (18 Nov)
+- `src/runner/kane.ts` runs one `_test.md` at a time (`kane-cli testmd run <file> --agent
+  [--author]`, stdin closed), parses NDJSON into a `FlowResult`. Unit-tested against real
+  Kane output in `src/runner/__fixtures__/`; live smoke run on t-5 matched (fail, step 2,
+  confirmed site bug, 33 credits).
+- `test_md_bug_verdict.confirmed` is the best signal for "Kane blames the site" — cleaner
+  than `verdict.family`.
+- FR-2 reruns only failures Kane hasn't confirmed as site bugs (confirmed: false); a
+  confirmed site bug or a pass ends the attempts. Deviation from "majority of 3" to save
+  credits.
+- Suite is an explicit list in `src/runner/suite.ts` (4 tests, mobile excluded). Score =
+  weighted share of passing tests: red baseline = 33, all fixed = 100.
+
 ## Stack
 - Node 20+ / TypeScript, Hono, vitest, Webflow Data API v2 via fetch, Anthropic SDK for fix planning — PRD defaults, no reason to swap.

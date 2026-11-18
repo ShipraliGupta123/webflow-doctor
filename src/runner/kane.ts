@@ -137,3 +137,26 @@ export function runTest(
   queue = job.catch(() => undefined);
   return job;
 }
+
+export async function runWithRetries(
+  test: SuiteTest,
+  opts: { author: boolean },
+  maxAttempts = 3,
+  run: typeof runTest = runTest, // injectable so tests don't call Kane
+): Promise<{ result: FlowResult; rawRuns: string[] }> {
+  const rawRuns: string[] = [];
+  let credits = 0;
+  let last: FlowResult | undefined;
+
+  for (let i = 0; i < maxAttempts; i++) {
+    const { result, rawNdjson } = await run(test, opts);
+    rawRuns.push(rawNdjson);
+    credits += result.credits;
+    last = result;
+    if (result.status === 'pass') break;                    // passed — done
+    if (result.diagnosis?.confirmedSiteBug === true) break; // real site bug — rerunning wastes credits
+  }
+
+  return { result: { ...last!, attempts: rawRuns.length, credits }, rawRuns };
+}
+
