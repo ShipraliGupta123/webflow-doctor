@@ -11,3 +11,4 @@ Brewed is a one-page store for coffee gear at https://webflow-doctor-demo.webflo
   each with an image, name, and description.
 - Every product's "Buy" button leads to a working page (no 404 or error page).
 - The footer shows a "Get in touch" heading and a contact email link.
+- The home page's browser title (the page `<title>`) is "Brewed — small-batch coffee gear".
