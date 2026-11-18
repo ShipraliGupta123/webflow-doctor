@@ -144,5 +144,37 @@
 - Suite is an explicit list in `src/runner/suite.ts` (4 tests, mobile excluded). Score =
   weighted share of passing tests: red baseline = 33, all fixed = 100.
 
+## Bug 3 → PAGE_META (18 Nov)
+- **Custom-code API needs an OAuth token** ("requires a bearer token obtained from an OAuth
+  Code Grant Flow"); site API tokens get 403 `invalid_auth_version` on `/custom_code` and
+  `/registered_scripts`. CUSTOM_CSS is therefore not executable with our site token — this
+  supersedes the CUSTOM_CSS line in T0.5 (that test used the MCP connector's OAuth).
+- Chose PAGE_META over building an OAuth app (time). Removed `footerhidebug`; planted home
+  page SEO title "Untitled" (fix: `PUT /v2/pages/6afb6f40015a6fa143a72dd0` with `seo.title`).
+  Footer test t-5 is a passing control again.
+- New requirement in site-brief → Kane added ac-19 to uc-2 → designed t-6 (one step) via
+  `design tests --use-case <id> --force`, steering it to leave t-2/t-3/t-4 untouched.
+- t-6's Title check reads `document.title` = "Untitled" (correct), but Kane's post-run
+  triage reports `confirmed: false / automation_bug` across 3 runs and 3 wordings — triage
+  ignores the title analyzer's capture. **Workaround:** runner records failed checks
+  (`context.memory`: expected vs actual + analyzer); title/URL failures count as precise
+  and are not rerun.
+- Suite is now 5 tests: t-1, t-4, t-6 red; t-3, t-5 green. Baseline score 36.
+
+## T2.1 / T2.3 — Webflow client & fix executors (18 Nov)
+- `src/webflow/client.ts`: the only code that calls Webflow. Staging guard: config must be
+  a plain `<name>.webflow.io` domain, and `publishToStaging()` hard-codes
+  `{publishToWebflowSubdomain: true}` — there is no parameter for custom domains.
+- Allow-list = ALT_TEXT, CMS_LINK, PAGE_META. Each fix is validated (gate rule 4), then
+  snapshot (old value) → write. Writes are staged; going live needs `publishFix()` (CMS
+  item publish) + `publishToStaging()`.
+- Live write check (`scripts/smoke-executors.ts`, no publish): all three applied and
+  rolled back to the exact old value. Restoring an empty alt sets `altText` back to `null`.
+- **Site token scopes needed:** Assets r/w, CMS r/w, Pages r/w, Sites r/w. Pages *write*
+  is required for PAGE_META (first token had read only → 403 `missing_scopes`).
+- **Load env with `--env-file=.env` only — never `source .env`.** Node's `--env-file`
+  does not override variables already set in the shell, so a stale exported token
+  silently wins (cost us a confusing 401 after rotating the token).
+
 ## Stack
 - Node 20+ / TypeScript, Hono, vitest, Webflow Data API v2 via fetch, Anthropic SDK for fix planning — PRD defaults, no reason to swap.
