@@ -92,6 +92,17 @@ export class WebflowClient {
     return this.call('PUT', `/pages/${pageId}`, { seo: { title } });
   }
 
+   // Inventory (read-only) — used by diagnose to give the planner real ids
+  listPages() {
+    return this.call('GET', `/sites/${this.cfg.siteId}/pages`);
+  }
+  listCollections() {
+    return this.call('GET', `/sites/${this.cfg.siteId}/collections`);
+  }
+  listItems(collectionId: string) {
+    return this.call('GET', `/collections/${collectionId}/items`);
+  }
+
   // Publish: hard-coded to the webflow.io subdomain. There is no way to pass custom domains.
   publishToStaging() {
     return this.call('POST', `/sites/${this.cfg.siteId}/publish`, { publishToWebflowSubdomain: true });
