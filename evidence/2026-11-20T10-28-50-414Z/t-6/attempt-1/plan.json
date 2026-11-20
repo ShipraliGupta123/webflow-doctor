@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "plan": {
+    "type": "PAGE_META",
+    "params": {
+      "pageId": "6afb6f40015a6fa143a72dd0",
+      "title": "Brewed — small-batch coffee gear"
+    },
+    "rationale": "The title check expected 'Brewed — small-batch coffee gear' but got 'Untitled', and the inventory confirms the Home page seoTitle and DOM title are both 'Untitled'. This is a real site issue despite Kane's automation-bug guess, so setting the page's SEO title meets the requirement."
+  },
+  "output": {
+    "fixType": "PAGE_META",
+    "assetId": "",
+    "altText": "",
+    "collectionId": "",
+    "itemId": "",
+    "field": "",
+    "url": "",
+    "pageId": "6afb6f40015a6fa143a72dd0",
+    "title": "Brewed — small-batch coffee gear",
+    "rationale": "The title check expected 'Brewed — small-batch coffee gear' but got 'Untitled', and the inventory confirms the Home page seoTitle and DOM title are both 'Untitled'. This is a real site issue despite Kane's automation-bug guess, so setting the page's SEO title meets the requirement."
+  }
+}

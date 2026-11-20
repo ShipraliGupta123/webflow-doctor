@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "plan": {
+    "type": "CMS_LINK",
+    "params": {
+      "collectionId": "6afbef72ddd8aeed2da51e10",
+      "itemId": "6afbf088f45b0ed3cc52f6e5",
+      "field": "buy-link",
+      "url": "https://webflow.com"
+    },
+    "rationale": "The Travel Press CMS item's buy-link is https://webflow.com/404-this-page-is-gone, which matches the Buy link that opened a 404. The working Burr Grinder and Pour-over Kettle items use https://webflow.com, so the Travel Press buy-link is pointed there."
+  },
+  "output": {
+    "fixType": "CMS_LINK",
+    "assetId": "",
+    "altText": "",
+    "collectionId": "6afbef72ddd8aeed2da51e10",
+    "itemId": "6afbf088f45b0ed3cc52f6e5",
+    "field": "buy-link",
+    "url": "https://webflow.com",
+    "pageId": "",
+    "title": "",
+    "rationale": "The Travel Press CMS item's buy-link is https://webflow.com/404-this-page-is-gone, which matches the Buy link that opened a 404. The working Burr Grinder and Pour-over Kettle items use https://webflow.com, so the Travel Press buy-link is pointed there."
+  }
+}

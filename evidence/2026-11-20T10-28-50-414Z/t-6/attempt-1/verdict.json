@@ -1,0 +1,105 @@
+{
+  "verdict": {
+    "accepted": true,
+    "reasons": [],
+    "checks": [
+      {
+        "rule": "1 target flow passes",
+        "passed": true,
+        "detail": "t-6 is pass"
+      },
+      {
+        "rule": "2 no regressions",
+        "passed": true,
+        "detail": "all still pass"
+      },
+      {
+        "rule": "3 tests unchanged",
+        "passed": true,
+        "detail": "hash matches"
+      },
+      {
+        "rule": "4 allow-listed, valid params",
+        "passed": true,
+        "detail": "ok"
+      },
+      {
+        "rule": "5 nothing removed",
+        "passed": true,
+        "detail": "ok"
+      },
+      {
+        "rule": "6 no special-casing of the test runner",
+        "passed": true,
+        "detail": "ok"
+      },
+      {
+        "rule": "7 within Kane run budget",
+        "passed": true,
+        "detail": "17/40 runs"
+      }
+    ]
+  },
+  "target": {
+    "status": "pass",
+    "durationMs": 18000,
+    "authorDecisions": 1,
+    "credits": 3.05543,
+    "sessionId": "c679f770-18b4-4f6d-8ae2-35bb38f43493",
+    "failedChecks": [],
+    "id": "t-6",
+    "name": "Home page browser title",
+    "weight": 2,
+    "attempts": 1
+  },
+  "regression": [
+    {
+      "status": "pass",
+      "durationMs": 159000,
+      "authorDecisions": 0,
+      "credits": 0,
+      "sessionId": "4cdbc29c-d51c-4f08-9a10-d8b2b3958d7a",
+      "failedChecks": [],
+      "id": "t-1",
+      "name": "Buy buttons reach a working page",
+      "weight": 3,
+      "attempts": 1
+    },
+    {
+      "status": "pass",
+      "durationMs": 10000,
+      "authorDecisions": 0,
+      "credits": 0,
+      "sessionId": "7bc9cc98-30d6-4061-b830-cccef192b8f3",
+      "failedChecks": [],
+      "id": "t-3",
+      "name": "Desktop hero and product listings",
+      "weight": 3,
+      "attempts": 1
+    },
+    {
+      "status": "pass",
+      "durationMs": 20000,
+      "authorDecisions": 0,
+      "credits": 0,
+      "sessionId": "c8ebe18a-d5e8-4bdb-81f3-e4f183432793",
+      "failedChecks": [],
+      "id": "t-4",
+      "name": "Hero image alt text",
+      "weight": 2,
+      "attempts": 1
+    },
+    {
+      "status": "pass",
+      "durationMs": 3000,
+      "authorDecisions": 0,
+      "credits": 0,
+      "sessionId": "17e1d961-7b96-45ee-83f5-4a4a259be22c",
+      "failedChecks": [],
+      "id": "t-5",
+      "name": "Footer contact email link",
+      "weight": 1,
+      "attempts": 1
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "score": 36,
+  "flows": [
+    {
+      "status": "fail",
+      "durationMs": 165000,
+      "failedStep": 4,
+      "failureMessage": "Final verification failed: \"the page that opens does not show a 404, \"page not found\", or error message\"",
+      "diagnosis": {
+        "confirmedSiteBug": true,
+        "bugTitle": "Travel Press Buy link opens a 404 page",
+        "family": "application_issue",
+        "category": "navigation_defect",
+        "confidence": 0.99,
+        "rootCause": "The Travel Press Buy button is linked to a page that no longer exists.",
+        "suggestion": "Update the Travel Press Buy button to the correct live purchase or product page, then retest the link."
+      },
+      "authorDecisions": 1,
+      "credits": 53.204460999999995,
+      "sessionId": "618fbd00-6b6a-4e5c-81fc-0302e44bf56d",
+      "failedChecks": [
+        {
+          "query": "the page that opens does not show a 404",
+          "expected": "false",
+          "actual": "true",
+          "analyzer": "textual_visual"
+        },
+        {
+          "query": "the page that opens does not show an error message",
+          "expected": "false",
+          "actual": "true",
+          "analyzer": "visual"
+        }
+      ],
+      "id": "t-1",
+      "name": "Buy buttons reach a working page",
+      "weight": 3,
+      "attempts": 1
+    },
+    {
+      "status": "pass",
+      "durationMs": 74000,
+      "authorDecisions": 0,
+      "credits": 31.8865785,
+      "sessionId": "4ee4e2e6-ff3c-4b30-b0e3-de341cd43066",
+      "failedChecks": [],
+      "id": "t-3",
+      "name": "Desktop hero and product listings",
+      "weight": 3,
+      "attempts": 1
+    },
+    {
+      "status": "fail",
+      "durationMs": 75000,
+      "failedStep": 2,
+      "failureMessage": "Final verification failed: \"the Brewed home-page hero image's alt attribute value is not an empty string\"",
+      "diagnosis": {
+        "confirmedSiteBug": true,
+        "bugTitle": "Hero image has empty alt text",
+        "family": "application_issue",
+        "category": "ui_data_defect",
+        "confidence": 0.91,
+        "rootCause": "The hero image’s alt attribute is empty, so people using screen readers do not receive a description of the main image.",
+        "suggestion": "Add a short, meaningful description of the coffee-cup hero image to its alt attribute, then rerun the check."
+      },
+      "authorDecisions": 2,
+      "credits": 39.11342,
+      "sessionId": "c9fad8ea-040a-4432-bc73-fe6561da0297",
+      "failedChecks": [
+        {
+          "query": "the Brewed home-page hero image's alt attribute value is not an empty string",
+          "expected": "true",
+          "actual": "false",
+          "analyzer": "textual_visual"
+        }
+      ],
+      "id": "t-4",
+      "name": "Hero image alt text",
+      "weight": 2,
+      "attempts": 1
+    },
+    {
+      "status": "pass",
+      "durationMs": 48000,
+      "authorDecisions": 0,
+      "credits": 27.78108,
+      "sessionId": "1289e2ea-bcb7-42e3-9513-34d91de787fa",
+      "failedChecks": [],
+      "id": "t-5",
+      "name": "Footer contact email link",
+      "weight": 1,
+      "attempts": 1
+    },
+    {
+      "status": "fail",
+      "durationMs": 27000,
+      "failedStep": 1,
+      "failureMessage": "Final verification failed: \"the browser tab title (document.title) is 'Brewed — small-batch coffee gear'\"",
+      "diagnosis": {
+        "confirmedSiteBug": false,
+        "bugTitle": "Final title verifier contradicts successful title assertion",
+        "family": "automation_bug",
+        "category": "config_issue",
+        "confidence": 0.88,
+        "rootCause": "The test result is internally inconsistent: step 0-3 is recorded as a successful assertion of the required browser-tab title, while final verification says that same check failed. The evidence does not show the actual document title or a product error, so this points to a verifier or test setup problem rather than a website defect.",
+        "suggestion": "Review the final-verification configuration and title-reading method. Log the exact document.title value used by both the step assertion and the final verifier, then make both checks use the same target and comparison rules."
+      },
+      "authorDecisions": 0,
+      "credits": 9.113180000000002,
+      "sessionId": "0e6d971d-44e4-45e4-bcd9-564a72c5ca5e",
+      "failedChecks": [
+        {
+          "query": "the browser tab title (document.title) is 'Brewed — small-batch coffee gear'",
+          "expected": "Brewed — small-batch coffee gear",
+          "actual": "Untitled",
+          "analyzer": "title"
+        }
+      ],
+      "id": "t-6",
+      "name": "Home page browser title",
+      "weight": 2,
+      "attempts": 1
+    }
+  ]
+}

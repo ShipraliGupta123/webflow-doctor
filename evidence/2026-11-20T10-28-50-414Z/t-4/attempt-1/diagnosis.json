@@ -1,0 +1,121 @@
+{
+  "flowId": "t-4",
+  "flowName": "Hero image alt text",
+  "testPath": ".testmuai/tests/brewed-hero-image-exposes-descriptive-non-empty-alt-text_test.md",
+  "failedStep": 2,
+  "failedStepText": "On the Brewed home-page hero, read the hero image's alt attribute from the DOM, then assert the alt attribute value is not an empty string.",
+  "failureMessage": "Final verification failed: \"the Brewed home-page hero image's alt attribute value is not an empty string\"",
+  "failedChecks": [
+    {
+      "query": "the Brewed home-page hero image's alt attribute value is not an empty string",
+      "expected": "true",
+      "actual": "false",
+      "analyzer": "textual_visual"
+    }
+  ],
+  "kane": {
+    "confirmedSiteBug": true,
+    "bugTitle": "Hero image has empty alt text",
+    "family": "application_issue",
+    "category": "ui_data_defect",
+    "confidence": 0.91,
+    "rootCause": "The hero image’s alt attribute is empty, so people using screen readers do not receive a description of the main image.",
+    "suggestion": "Add a short, meaningful description of the coffee-cup hero image to its alt attribute, then rerun the check."
+  },
+  "inventory": {
+    "stagingUrl": "https://webflow-doctor-demo.webflow.io",
+    "pages": [
+      {
+        "pageId": "6afb6f40015a6fa143a72dd0",
+        "title": "Home",
+        "slug": null,
+        "seoTitle": "Untitled"
+      }
+    ],
+    "cmsItems": [
+      {
+        "collectionId": "6afbef72ddd8aeed2da51e10",
+        "collectionName": "Products",
+        "itemId": "6afbf088f45b0ed3cc52f6e5",
+        "name": "Travel Press",
+        "fields": {
+          "blurb": "A full French press that fits in a backpack pocket. Brews anywhere, cleans up in seconds.",
+          "buy-link": "https://webflow.com",
+          "name": "Travel Press",
+          "slug": "travel-press"
+        }
+      },
+      {
+        "collectionId": "6afbef72ddd8aeed2da51e10",
+        "collectionName": "Products",
+        "itemId": "6afbf042b1411e25d8ed07ca",
+        "name": "Burr Grinder",
+        "fields": {
+          "blurb": "Forty grind settings from espresso-fine to French-press coarse. Quiet, consistent, compact.",
+          "buy-link": "https://webflow.com",
+          "name": "Burr Grinder",
+          "slug": "burr-grinder"
+        }
+      },
+      {
+        "collectionId": "6afbef72ddd8aeed2da51e10",
+        "collectionName": "Products",
+        "itemId": "6afbeffe76a47b56acdf6c49",
+        "name": "Pour-over Kettle",
+        "fields": {
+          "blurb": "Gooseneck spout for a slow, precise pour. Holds 1L and heats in under three minutes.",
+          "buy-link": "https://webflow.com",
+          "name": "Pour-over Kettle",
+          "slug": "pour-over-kettle"
+        }
+      }
+    ],
+    "dom": {
+      "title": "Untitled",
+      "images": [
+        {
+          "assetId": "6afb70b5f814d42288f41ade",
+          "alt": "",
+          "src": "https://cdn.prod.website-files.com/6afb6f3f015a6fa143a72dc5/6afb70b5f814d42288f41ade_CA4A5845e.webp"
+        },
+        {
+          "assetId": "6afbf085ac2425c52be3bb8b",
+          "alt": "Travel Press",
+          "src": "https://cdn.prod.website-files.com/6afbef71ad794079cf9e57d3/6afbf085ac2425c52be3bb8b_Press.webp"
+        },
+        {
+          "assetId": "6afbf02fe7aa6b7dd1424a6e",
+          "alt": "Burr Grinder",
+          "src": "https://cdn.prod.website-files.com/6afbef71ad794079cf9e57d3/6afbf02fe7aa6b7dd1424a6e_Grinder.jpeg"
+        },
+        {
+          "assetId": "6afbefaf49543ed797ab92a5",
+          "alt": "Pour-over Kettle",
+          "src": "https://cdn.prod.website-files.com/6afbef71ad794079cf9e57d3/6afbefaf49543ed797ab92a5_kettle.webp"
+        }
+      ],
+      "links": [
+        {
+          "href": "#products",
+          "text": "Shop now"
+        },
+        {
+          "href": "https://webflow.com",
+          "text": "Buy"
+        },
+        {
+          "href": "https://webflow.com",
+          "text": "Buy"
+        },
+        {
+          "href": "https://webflow.com",
+          "text": "Buy"
+        },
+        {
+          "href": "mailto:hello@brewed.example.com",
+          "text": "hello@brewed.example.com"
+        }
+      ]
+    }
+  }
+}

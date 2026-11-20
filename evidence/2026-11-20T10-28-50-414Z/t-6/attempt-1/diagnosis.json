@@ -1,0 +1,121 @@
+{
+  "flowId": "t-6",
+  "flowName": "Home page browser title",
+  "testPath": ".testmuai/tests/brewed-home-page-browser-title-matches-the-specified-title_test.md",
+  "failedStep": 1,
+  "failedStepText": "Open https://webflow-doctor-demo.webflow.io, then assert the browser tab title (document.title) is 'Brewed — small-batch coffee gear'. Do not use the on-page heading for this check.",
+  "failureMessage": "Final verification failed: \"the browser tab title (document.title) is 'Brewed — small-batch coffee gear'\"",
+  "failedChecks": [
+    {
+      "query": "the browser tab title (document.title) is 'Brewed — small-batch coffee gear'",
+      "expected": "Brewed — small-batch coffee gear",
+      "actual": "Untitled",
+      "analyzer": "title"
+    }
+  ],
+  "kane": {
+    "confirmedSiteBug": false,
+    "bugTitle": "Final title verifier contradicts successful title assertion",
+    "family": "automation_bug",
+    "category": "config_issue",
+    "confidence": 0.88,
+    "rootCause": "The test result is internally inconsistent: step 0-3 is recorded as a successful assertion of the required browser-tab title, while final verification says that same check failed. The evidence does not show the actual document title or a product error, so this points to a verifier or test setup problem rather than a website defect.",
+    "suggestion": "Review the final-verification configuration and title-reading method. Log the exact document.title value used by both the step assertion and the final verifier, then make both checks use the same target and comparison rules."
+  },
+  "inventory": {
+    "stagingUrl": "https://webflow-doctor-demo.webflow.io",
+    "pages": [
+      {
+        "pageId": "6afb6f40015a6fa143a72dd0",
+        "title": "Home",
+        "slug": null,
+        "seoTitle": "Untitled"
+      }
+    ],
+    "cmsItems": [
+      {
+        "collectionId": "6afbef72ddd8aeed2da51e10",
+        "collectionName": "Products",
+        "itemId": "6afbf088f45b0ed3cc52f6e5",
+        "name": "Travel Press",
+        "fields": {
+          "blurb": "A full French press that fits in a backpack pocket. Brews anywhere, cleans up in seconds.",
+          "buy-link": "https://webflow.com",
+          "name": "Travel Press",
+          "slug": "travel-press"
+        }
+      },
+      {
+        "collectionId": "6afbef72ddd8aeed2da51e10",
+        "collectionName": "Products",
+        "itemId": "6afbf042b1411e25d8ed07ca",
+        "name": "Burr Grinder",
+        "fields": {
+          "blurb": "Forty grind settings from espresso-fine to French-press coarse. Quiet, consistent, compact.",
+          "buy-link": "https://webflow.com",
+          "name": "Burr Grinder",
+          "slug": "burr-grinder"
+        }
+      },
+      {
+        "collectionId": "6afbef72ddd8aeed2da51e10",
+        "collectionName": "Products",
+        "itemId": "6afbeffe76a47b56acdf6c49",
+        "name": "Pour-over Kettle",
+        "fields": {
+          "blurb": "Gooseneck spout for a slow, precise pour. Holds 1L and heats in under three minutes.",
+          "buy-link": "https://webflow.com",
+          "name": "Pour-over Kettle",
+          "slug": "pour-over-kettle"
+        }
+      }
+    ],
+    "dom": {
+      "title": "Untitled",
+      "images": [
+        {
+          "assetId": "6afb70b5f814d42288f41ade",
+          "alt": "A cup of freshly brewed coffee",
+          "src": "https://cdn.prod.website-files.com/6afb6f3f015a6fa143a72dc5/6afb70b5f814d42288f41ade_CA4A5845e.webp"
+        },
+        {
+          "assetId": "6afbf085ac2425c52be3bb8b",
+          "alt": "Travel Press",
+          "src": "https://cdn.prod.website-files.com/6afbef71ad794079cf9e57d3/6afbf085ac2425c52be3bb8b_Press.webp"
+        },
+        {
+          "assetId": "6afbf02fe7aa6b7dd1424a6e",
+          "alt": "Burr Grinder",
+          "src": "https://cdn.prod.website-files.com/6afbef71ad794079cf9e57d3/6afbf02fe7aa6b7dd1424a6e_Grinder.jpeg"
+        },
+        {
+          "assetId": "6afbefaf49543ed797ab92a5",
+          "alt": "Pour-over Kettle",
+          "src": "https://cdn.prod.website-files.com/6afbef71ad794079cf9e57d3/6afbefaf49543ed797ab92a5_kettle.webp"
+        }
+      ],
+      "links": [
+        {
+          "href": "#products",
+          "text": "Shop now"
+        },
+        {
+          "href": "https://webflow.com",
+          "text": "Buy"
+        },
+        {
+          "href": "https://webflow.com",
+          "text": "Buy"
+        },
+        {
+          "href": "https://webflow.com",
+          "text": "Buy"
+        },
+        {
+          "href": "mailto:hello@brewed.example.com",
+          "text": "hello@brewed.example.com"
+        }
+      ]
+    }
+  }
+}

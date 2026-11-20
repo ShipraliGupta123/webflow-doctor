@@ -1,0 +1,38 @@
+{
+  "runId": "2026-11-20T10-28-50-414Z",
+  "scoreBefore": 36,
+  "scoreAfter": 100,
+  "kaneRuns": 22,
+  "flows": [
+    {
+      "id": "t-1",
+      "name": "Buy buttons reach a working page",
+      "before": "fail",
+      "after": "pass"
+    },
+    {
+      "id": "t-3",
+      "name": "Desktop hero and product listings",
+      "before": "pass",
+      "after": "pass"
+    },
+    {
+      "id": "t-4",
+      "name": "Hero image alt text",
+      "before": "fail",
+      "after": "pass"
+    },
+    {
+      "id": "t-5",
+      "name": "Footer contact email link",
+      "before": "pass",
+      "after": "pass"
+    },
+    {
+      "id": "t-6",
+      "name": "Home page browser title",
+      "before": "fail",
+      "after": "pass"
+    }
+  ]
+}

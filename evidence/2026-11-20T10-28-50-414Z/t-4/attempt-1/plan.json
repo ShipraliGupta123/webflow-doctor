@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "plan": {
+    "type": "ALT_TEXT",
+    "params": {
+      "assetId": "6afb70b5f814d42288f41ade",
+      "altText": "A cup of freshly brewed coffee"
+    },
+    "rationale": "The failed check shows the hero image's alt attribute is empty, and the DOM inventory confirms that asset 6afb70b5f814d42288f41ade (the first, hero image) has alt=\"\". Kane identifies it as a coffee-cup image, so adding a descriptive alt text fixes the defect."
+  },
+  "output": {
+    "fixType": "ALT_TEXT",
+    "assetId": "6afb70b5f814d42288f41ade",
+    "altText": "A cup of freshly brewed coffee",
+    "collectionId": "",
+    "itemId": "",
+    "field": "",
+    "url": "",
+    "pageId": "",
+    "title": "",
+    "rationale": "The failed check shows the hero image's alt attribute is empty, and the DOM inventory confirms that asset 6afb70b5f814d42288f41ade (the first, hero image) has alt=\"\". Kane identifies it as a coffee-cup image, so adding a descriptive alt text fixes the defect."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "verdict": {
+    "accepted": true,
+    "reasons": [],
+    "checks": [
+      {
+        "rule": "1 target flow passes",
+        "passed": true,
+        "detail": "t-1 is pass"
+      },
+      {
+        "rule": "2 no regressions",
+        "passed": true,
+        "detail": "all still pass"
+      },
+      {
+        "rule": "3 tests unchanged",
+        "passed": true,
+        "detail": "hash matches"
+      },
+      {
+        "rule": "4 allow-listed, valid params",
+        "passed": true,
+        "detail": "ok"
+      },
+      {
+        "rule": "5 nothing removed",
+        "passed": true,
+        "detail": "ok"
+      },
+      {
+        "rule": "6 no special-casing of the test runner",
+        "passed": true,
+        "detail": "ok"
+      },
+      {
+        "rule": "7 within Kane run budget",
+        "passed": true,
+        "detail": "8/40 runs"
+      }
+    ]
+  },
+  "target": {
+    "status": "pass",
+    "durationMs": 157000,
+    "authorDecisions": 1,
+    "credits": 62.21037750000001,
+    "sessionId": "b4f082ca-5d31-4934-a44b-bb33df395ca0",
+    "failedChecks": [],
+    "id": "t-1",
+    "name": "Buy buttons reach a working page",
+    "weight": 3,
+    "attempts": 1
+  },
+  "regression": [
+    {
+      "status": "pass",
+      "durationMs": 10000,
+      "authorDecisions": 0,
+      "credits": 0,
+      "sessionId": "c7511eca-2635-4c2d-9119-a6a809248db0",
+      "failedChecks": [],
+      "id": "t-3",
+      "name": "Desktop hero and product listings",
+      "weight": 3,
+      "attempts": 1
+    },
+    {
+      "status": "pass",
+      "durationMs": 4000,
+      "authorDecisions": 0,
+      "credits": 0,
+      "sessionId": "464e8ca2-588f-4c52-ac89-6d04b52b2b1f",
+      "failedChecks": [],
+      "id": "t-5",
+      "name": "Footer contact email link",
+      "weight": 1,
+      "attempts": 1
+    }
+  ]
+}

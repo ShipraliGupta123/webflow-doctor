@@ -1,0 +1,157 @@
+{"type":"stream_start","cli_version":"0.10.4","surface":"testmd","pid":66376,"v":1,"ts":"2026-11-20T10:48:16.568Z"}
+{"type":"test_md_step_start","step_index":1,"heading":"Step 1","ref":null,"v":1,"ts":"2026-11-20T10:48:19.643Z"}
+{"type":"run_start","objective":"At https://webflow-doctor-demo.webflow.io, open the Brewed home page and reach its products section.","timestamp":1795171699,"environment":{"resolution":"1920x1080"},"v":1,"ts":"2026-11-20T10:48:19.666Z"}
+{"type":"step_event","index":0,"event":"replay_started","detail":"replaying 2 actions","recording_length":2,"v":1,"ts":"2026-11-20T10:48:19.666Z"}
+{"type":"step_start","index":1,"objective":"Step 1","v":1,"ts":"2026-11-20T10:48:19.666Z"}
+{"type":"step_event","index":1,"event":"screenshot","detail":"https://kaneai-playground.lambdatest.io/","v":1,"ts":"2026-11-20T10:48:19.822Z"}
+{"type":"step_event","index":1,"event":"action","detail":"Navigate to https://webflow-doctor-demo.webflow.io","action_type":"navigate","success":true,"v":1,"ts":"2026-11-20T10:48:20.184Z"}
+{"type":"step_event","index":1,"event":"reasoning","detail":"Navigate to https://webflow-doctor-demo.webflow.io","action_type":"navigate","v":1,"ts":"2026-11-20T10:48:20.184Z"}
+{"type":"step_end","index":1,"status":"passed","duration":0.5,"summary":"navigate: Navigate to https://webflow-doctor-demo.webflow.io","ordinal":1,"id":"0-1","kind":"navigate","screenshot":"screenshot.jpg","action_id":"7342c135-a0a4-4d62-b91d-918fdbca6edc","v":1,"ts":"2026-11-20T10:48:20.185Z"}
+{"type":"step_start","index":2,"objective":"Step 2","v":1,"ts":"2026-11-20T10:48:20.185Z"}
+{"type":"step_event","index":2,"event":"screenshot","detail":"https://webflow-doctor-demo.webflow.io/","v":1,"ts":"2026-11-20T10:48:20.260Z"}
+{"type":"step_event","index":2,"event":"action","detail":"Clicking Shop now in the hero section","action_type":"click","success":true,"v":1,"ts":"2026-11-20T10:48:20.823Z"}
+{"type":"step_event","index":2,"event":"reasoning","detail":"Clicking Shop now in the hero section","action_type":"click","v":1,"ts":"2026-11-20T10:48:20.824Z"}
+{"type":"step_end","index":2,"status":"passed","duration":0.6,"summary":"click: Clicking Shop now in the hero section","ordinal":2,"id":"0-2","kind":"click","screenshot":"screenshot.jpg","action_id":"b7c9c208-90fe-4f93-8baa-1d03fa8fda35","v":1,"ts":"2026-11-20T10:48:20.924Z"}
+{"type":"run_end","run_id":"run-0","status":"passed","summary":"","reason":"replay completed","duration":1.27,"final_url":"https://webflow-doctor-demo.webflow.io/#products","actions_executed":2,"screenshot_path":"/Users/ship/.testmuai/kaneai/sessions/4cdbc29c-d51c-4f08-9a10-d8b2b3958d7a/scratch/0/replay-test/screenshots/step_002.png","run_dir":"/Users/ship/.testmuai/kaneai/sessions/4cdbc29c-d51c-4f08-9a10-d8b2b3958d7a/scratch/0/replay-test","total_runs":1,"context":{"memory":{},"variables":{},"pointer":""},"variables_out":{},"store_out":{},"result_code":100,"reason_code":"success.complete","v":1,"ts":"2026-11-20T10:48:20.927Z"}
+{"type":"test_md_step_end","step_index":1,"status":"passed","duration_s":1.27,"ref_kind":null,"unit_kind":null,"inlined_count":null,"failed_sub_step_index":null,"v":1,"ts":"2026-11-20T10:48:20.927Z"}
+{"type":"test_md_step_start","step_index":2,"heading":"Step 2","ref":null,"v":1,"ts":"2026-11-20T10:48:20.927Z"}
+{"type":"run_start","objective":"From the Brewed products section at https://webflow-doctor-demo.webflow.io, click the Pour-over Kettle Buy button, then assert the page that opens does not show a 404, \"page not found\", or error message.","timestamp":1795171700,"environment":{"resolution":"1920x1080"},"v":1,"ts":"2026-11-20T10:48:20.931Z"}
+{"type":"step_event","index":0,"event":"replay_started","detail":"replaying 9 actions","recording_length":9,"v":1,"ts":"2026-11-20T10:48:20.931Z"}
+{"type":"step_start","index":1,"objective":"Step 1","v":1,"ts":"2026-11-20T10:48:20.932Z"}
+{"type":"step_event","index":1,"event":"screenshot","detail":"https://webflow-doctor-demo.webflow.io/#products","v":1,"ts":"2026-11-20T10:48:21.032Z"}
+{"type":"step_event","index":1,"event":"action","detail":"Navigate to https://webflow-doctor-demo.webflow.io","action_type":"navigate","success":true,"v":1,"ts":"2026-11-20T10:48:21.126Z"}
+{"type":"step_event","index":1,"event":"reasoning","detail":"Navigate to https://webflow-doctor-demo.webflow.io","action_type":"navigate","v":1,"ts":"2026-11-20T10:48:21.126Z"}
+{"type":"step_end","index":1,"status":"passed","duration":0.2,"summary":"navigate: Navigate to https://webflow-doctor-demo.webflow.io","ordinal":3,"id":"1-1","kind":"navigate","screenshot":"screenshot.jpg","action_id":"0ab1c963-124e-4309-a820-c66c318f8aff","v":1,"ts":"2026-11-20T10:48:21.127Z"}
+{"type":"step_start","index":2,"objective":"Step 2","v":1,"ts":"2026-11-20T10:48:21.127Z"}
+{"type":"step_event","index":2,"event":"screenshot","detail":"https://webflow-doctor-demo.webflow.io/","v":1,"ts":"2026-11-20T10:48:21.241Z"}
+{"type":"step_event","index":2,"event":"action","detail":"Waiting for Our gear section to load","action_type":"wait","success":true,"v":1,"ts":"2026-11-20T10:48:21.747Z"}
+{"type":"step_event","index":2,"event":"reasoning","detail":"Waiting for Our gear section to load","action_type":"wait","v":1,"ts":"2026-11-20T10:48:21.747Z"}
+{"type":"step_end","index":2,"status":"passed","duration":0.6,"summary":"wait: Waiting for Our gear section to load","ordinal":4,"id":"1-2","kind":"wait","screenshot":"screenshot.jpg","action_id":"0eb62d34-3f34-4455-a6a3-88c589a4f145","v":1,"ts":"2026-11-20T10:48:21.750Z"}
+{"type":"step_start","index":3,"objective":"Step 3","v":1,"ts":"2026-11-20T10:48:21.750Z"}
+{"type":"step_event","index":3,"event":"screenshot","detail":"https://webflow-doctor-demo.webflow.io/","v":1,"ts":"2026-11-20T10:48:21.837Z"}
+{"type":"step_event","index":3,"event":"action","detail":"Scrolling to the Pour-over Kettle Buy button","action_type":"scroll","success":true,"v":1,"ts":"2026-11-20T10:48:21.854Z"}
+{"type":"step_event","index":3,"event":"reasoning","detail":"Scrolling to the Pour-over Kettle Buy button","action_type":"scroll","v":1,"ts":"2026-11-20T10:48:21.854Z"}
+{"type":"step_end","index":3,"status":"passed","duration":0.1,"summary":"scroll: Scrolling to the Pour-over Kettle Buy button","ordinal":5,"id":"1-3","kind":"scroll","screenshot":"screenshot.jpg","action_id":"b1d9906f-ca47-4777-8029-f7aac15dde36","v":1,"ts":"2026-11-20T10:48:22.045Z"}
+{"type":"step_start","index":4,"objective":"Step 4","v":1,"ts":"2026-11-20T10:48:22.045Z"}
+{"type":"step_event","index":4,"event":"screenshot","detail":"https://webflow-doctor-demo.webflow.io/","v":1,"ts":"2026-11-20T10:48:22.087Z"}
+{"type":"step_event","index":4,"event":"action","detail":"Clicking the Buy button for the Pour-over Kettle in Our gear","action_type":"click","success":true,"v":1,"ts":"2026-11-20T10:48:23.689Z"}
+{"type":"step_event","index":4,"event":"reasoning","detail":"Clicking the Buy button for the Pour-over Kettle in Our gear","action_type":"click","v":1,"ts":"2026-11-20T10:48:23.689Z"}
+{"type":"step_end","index":4,"status":"passed","duration":1.6,"summary":"click: Clicking the Buy button for the Pour-over Kettle in Our gear","ordinal":6,"id":"1-4","kind":"click","screenshot":"screenshot.jpg","action_id":"3ad148d7-6d90-4d54-b922-e8678a4c717a","v":1,"ts":"2026-11-20T10:48:23.769Z"}
+{"type":"step_start","index":5,"objective":"Step 5","v":1,"ts":"2026-11-20T10:48:23.769Z"}
+{"type":"step_event","index":5,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:48:23.967Z"}
+{"type":"step_event","index":5,"event":"action","detail":"Waiting for the destination page to finish loading","action_type":"wait","success":true,"v":1,"ts":"2026-11-20T10:48:29.164Z"}
+{"type":"step_event","index":5,"event":"reasoning","detail":"Waiting for the destination page to finish loading","action_type":"wait","v":1,"ts":"2026-11-20T10:48:29.164Z"}
+{"type":"step_end","index":5,"status":"passed","duration":5.4,"summary":"wait: Waiting for the destination page to finish loading","ordinal":7,"id":"1-5","kind":"wait","screenshot":"screenshot.jpg","action_id":"a9c6d2b4-99b3-4b98-a74c-388410d75c7d","v":1,"ts":"2026-11-20T10:48:29.164Z"}
+{"type":"step_start","index":6,"objective":"Step 6","v":1,"ts":"2026-11-20T10:48:29.164Z"}
+{"type":"step_event","index":6,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:48:29.309Z"}
+{"type":"step_event","index":6,"event":"action","detail":"Checking whether a 404 message is visible","action_type":"analyze","success":true,"v":1,"ts":"2026-11-20T10:48:44.129Z"}
+{"type":"step_event","index":6,"event":"reasoning","detail":"Checking whether a 404 message is visible","action_type":"analyze","v":1,"ts":"2026-11-20T10:48:44.130Z"}
+{"type":"step_end","index":6,"status":"passed","duration":15,"summary":"analyze: Checking whether a 404 message is visible","ordinal":8,"id":"1-6","kind":"analyze","screenshot":"screenshot.jpg","action_id":"be9ab713-c3c5-4d44-8e1e-e3cec988b5b2","v":1,"ts":"2026-11-20T10:48:44.131Z"}
+{"type":"step_start","index":7,"objective":"Step 7","v":1,"ts":"2026-11-20T10:48:44.131Z"}
+{"type":"step_event","index":7,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:48:44.278Z"}
+{"type":"step_event","index":7,"event":"action","detail":"Checking whether page not found is visible","action_type":"analyze","success":true,"v":1,"ts":"2026-11-20T10:48:57.271Z"}
+{"type":"step_event","index":7,"event":"reasoning","detail":"Checking whether page not found is visible","action_type":"analyze","v":1,"ts":"2026-11-20T10:48:57.271Z"}
+{"type":"step_end","index":7,"status":"passed","duration":13.1,"summary":"analyze: Checking whether page not found is visible","ordinal":9,"id":"1-7","kind":"analyze","screenshot":"screenshot.jpg","action_id":"c4a8a986-01f1-4e87-a8ca-3786e996b9c6","v":1,"ts":"2026-11-20T10:48:57.273Z"}
+{"type":"step_start","index":8,"objective":"Step 8","v":1,"ts":"2026-11-20T10:48:57.274Z"}
+{"type":"step_event","index":8,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:48:57.430Z"}
+{"type":"step_event","index":8,"event":"action","detail":"Checking whether an error message is visible","action_type":"analyze","success":true,"v":1,"ts":"2026-11-20T10:49:11.725Z"}
+{"type":"step_event","index":8,"event":"reasoning","detail":"Checking whether an error message is visible","action_type":"analyze","v":1,"ts":"2026-11-20T10:49:11.726Z"}
+{"type":"step_end","index":8,"status":"passed","duration":14.5,"summary":"analyze: Checking whether an error message is visible","ordinal":10,"id":"1-8","kind":"analyze","screenshot":"screenshot.jpg","action_id":"6f887dd2-62c7-477a-8529-2e28b3718085","v":1,"ts":"2026-11-20T10:49:11.731Z"}
+{"type":"step_start","index":9,"objective":"Step 9","v":1,"ts":"2026-11-20T10:49:11.731Z"}
+{"type":"step_event","index":9,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:49:11.905Z"}
+{"type":"step_event","index":9,"event":"assertion","detail":"the page that opens does not show a 404, \"page not found\", or error message","passed":true,"v":1,"ts":"2026-11-20T10:49:11.906Z"}
+{"type":"step_end","index":9,"status":"passed","duration":0.2,"summary":"assert: the page that opens does not show a 404, \"page not found\", or error message","ordinal":11,"id":"1-9","kind":"assert","screenshot":"screenshot.jpg","action_id":"ebcc9c9d-9502-4fcc-8517-3a0fa5b16290","v":1,"ts":"2026-11-20T10:49:11.908Z"}
+{"type":"run_end","run_id":"run-1","status":"passed","summary":"","reason":"replay completed","duration":51.01,"final_url":"https://webflow.com/","actions_executed":9,"screenshot_path":"/Users/ship/.testmuai/kaneai/sessions/4cdbc29c-d51c-4f08-9a10-d8b2b3958d7a/scratch/1/replay-test/screenshots/step_009.png","run_dir":"/Users/ship/.testmuai/kaneai/sessions/4cdbc29c-d51c-4f08-9a10-d8b2b3958d7a/scratch/1/replay-test","total_runs":1,"context":{"memory":{},"variables":{"no_404_check":{"syntax":"{{no_404_check}}","value":"false","secret":false},"no_page_not_found_check":{"syntax":"{{no_page_not_found_check}}","value":"false","secret":false},"no_error_message_check":{"syntax":"{{no_error_message_check}}","value":"false","secret":false}},"pointer":""},"variables_out":{"no_404_check":{"syntax":"{{no_404_check}}","value":"false","secret":false},"no_page_not_found_check":{"syntax":"{{no_page_not_found_check}}","value":"false","secret":false},"no_error_message_check":{"syntax":"{{no_error_message_check}}","value":"false","secret":false}},"store_out":{},"result_code":100,"reason_code":"success.complete","v":1,"ts":"2026-11-20T10:49:11.943Z"}
+{"type":"test_md_step_end","step_index":2,"status":"passed","duration_s":51.01,"ref_kind":null,"unit_kind":null,"inlined_count":null,"failed_sub_step_index":null,"v":1,"ts":"2026-11-20T10:49:11.943Z"}
+{"type":"test_md_step_start","step_index":3,"heading":"Step 3","ref":null,"v":1,"ts":"2026-11-20T10:49:11.943Z"}
+{"type":"run_start","objective":"From the Brewed products section at https://webflow-doctor-demo.webflow.io, click the Burr Grinder Buy button, then assert the page that opens does not show a 404, \"page not found\", or error message.","timestamp":1795171751,"environment":{"resolution":"1920x1080"},"v":1,"ts":"2026-11-20T10:49:11.947Z"}
+{"type":"step_event","index":0,"event":"replay_started","detail":"replaying 8 actions","recording_length":8,"v":1,"ts":"2026-11-20T10:49:11.947Z"}
+{"type":"step_start","index":1,"objective":"Step 1","v":1,"ts":"2026-11-20T10:49:11.948Z"}
+{"type":"step_event","index":1,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:49:12.085Z"}
+{"type":"step_event","index":1,"event":"action","detail":"Navigate to https://webflow-doctor-demo.webflow.io","action_type":"navigate","success":true,"v":1,"ts":"2026-11-20T10:49:12.197Z"}
+{"type":"step_event","index":1,"event":"reasoning","detail":"Navigate to https://webflow-doctor-demo.webflow.io","action_type":"navigate","v":1,"ts":"2026-11-20T10:49:12.197Z"}
+{"type":"step_end","index":1,"status":"passed","duration":0.2,"summary":"navigate: Navigate to https://webflow-doctor-demo.webflow.io","ordinal":12,"id":"2-1","kind":"navigate","screenshot":"screenshot.jpg","action_id":"3c30cb60-858a-4446-beca-961ba50a22c2","v":1,"ts":"2026-11-20T10:49:12.199Z"}
+{"type":"step_start","index":2,"objective":"Step 2","v":1,"ts":"2026-11-20T10:49:12.199Z"}
+{"type":"step_event","index":2,"event":"screenshot","detail":"https://webflow-doctor-demo.webflow.io/","v":1,"ts":"2026-11-20T10:49:12.303Z"}
+{"type":"step_event","index":2,"event":"action","detail":"Scrolling to the Burr Grinder Buy button in the Brewed products section","action_type":"scroll","success":true,"v":1,"ts":"2026-11-20T10:49:12.322Z"}
+{"type":"step_event","index":2,"event":"reasoning","detail":"Scrolling to the Burr Grinder Buy button in the Brewed products section","action_type":"scroll","v":1,"ts":"2026-11-20T10:49:12.322Z"}
+{"type":"step_end","index":2,"status":"passed","duration":0.1,"summary":"scroll: Scrolling to the Burr Grinder Buy button in the Brewed products section","ordinal":13,"id":"2-2","kind":"scroll","screenshot":"screenshot.jpg","action_id":"b137dfc9-1c6a-4720-be7e-869b4b0bb384","v":1,"ts":"2026-11-20T10:49:12.514Z"}
+{"type":"step_start","index":3,"objective":"Step 3","v":1,"ts":"2026-11-20T10:49:12.515Z"}
+{"type":"step_event","index":3,"event":"screenshot","detail":"https://webflow-doctor-demo.webflow.io/","v":1,"ts":"2026-11-20T10:49:12.570Z"}
+{"type":"step_event","index":3,"event":"action","detail":"Clicking the Burr Grinder Buy button in the Brewed products section","action_type":"click","success":true,"v":1,"ts":"2026-11-20T10:49:13.453Z"}
+{"type":"step_event","index":3,"event":"reasoning","detail":"Clicking the Burr Grinder Buy button in the Brewed products section","action_type":"click","v":1,"ts":"2026-11-20T10:49:13.453Z"}
+{"type":"step_end","index":3,"status":"passed","duration":0.9,"summary":"click: Clicking the Burr Grinder Buy button in the Brewed products section","ordinal":14,"id":"2-3","kind":"click","screenshot":"screenshot.jpg","action_id":"52ee1e66-247d-4151-945d-d83bcb627e2f","v":1,"ts":"2026-11-20T10:49:13.554Z"}
+{"type":"step_start","index":4,"objective":"Step 4","v":1,"ts":"2026-11-20T10:49:13.554Z"}
+{"type":"step_event","index":4,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:49:13.852Z"}
+{"type":"step_event","index":4,"event":"action","detail":"Waiting for the Webflow destination page to load","action_type":"wait","success":true,"v":1,"ts":"2026-11-20T10:49:20.804Z"}
+{"type":"step_event","index":4,"event":"reasoning","detail":"Waiting for the Webflow destination page to load","action_type":"wait","v":1,"ts":"2026-11-20T10:49:20.804Z"}
+{"type":"step_end","index":4,"status":"passed","duration":7.3,"summary":"wait: Waiting for the Webflow destination page to load","ordinal":15,"id":"2-4","kind":"wait","screenshot":"screenshot.jpg","action_id":"1f71e795-20de-49e5-8f48-60b6dc989581","v":1,"ts":"2026-11-20T10:49:20.805Z"}
+{"type":"step_start","index":5,"objective":"Step 5","v":1,"ts":"2026-11-20T10:49:20.806Z"}
+{"type":"step_event","index":5,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:49:20.956Z"}
+{"type":"step_event","index":5,"event":"action","detail":"Checking whether a 404 page indicator is present","action_type":"analyze","success":true,"v":1,"ts":"2026-11-20T10:49:38.761Z"}
+{"type":"step_event","index":5,"event":"reasoning","detail":"Checking whether a 404 page indicator is present","action_type":"analyze","v":1,"ts":"2026-11-20T10:49:38.762Z"}
+{"type":"step_end","index":5,"status":"passed","duration":18,"summary":"analyze: Checking whether a 404 page indicator is present","ordinal":16,"id":"2-5","kind":"analyze","screenshot":"screenshot.jpg","action_id":"b8bce16d-9597-4a1d-b640-4ece30e22588","v":1,"ts":"2026-11-20T10:49:38.763Z"}
+{"type":"step_start","index":6,"objective":"Step 6","v":1,"ts":"2026-11-20T10:49:38.763Z"}
+{"type":"step_event","index":6,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:49:38.933Z"}
+{"type":"step_event","index":6,"event":"action","detail":"Checking whether page not found text is present","action_type":"analyze","success":true,"v":1,"ts":"2026-11-20T10:49:54.429Z"}
+{"type":"step_event","index":6,"event":"reasoning","detail":"Checking whether page not found text is present","action_type":"analyze","v":1,"ts":"2026-11-20T10:49:54.430Z"}
+{"type":"step_end","index":6,"status":"passed","duration":15.7,"summary":"analyze: Checking whether page not found text is present","ordinal":17,"id":"2-6","kind":"analyze","screenshot":"screenshot.jpg","action_id":"3e40b6c6-bffd-4348-8728-6608d5da4141","v":1,"ts":"2026-11-20T10:49:54.431Z"}
+{"type":"step_start","index":7,"objective":"Step 7","v":1,"ts":"2026-11-20T10:49:54.432Z"}
+{"type":"step_event","index":7,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:49:54.602Z"}
+{"type":"step_event","index":7,"event":"action","detail":"Checking whether an error message is present","action_type":"analyze","success":true,"v":1,"ts":"2026-11-20T10:50:08.049Z"}
+{"type":"step_event","index":7,"event":"reasoning","detail":"Checking whether an error message is present","action_type":"analyze","v":1,"ts":"2026-11-20T10:50:08.050Z"}
+{"type":"step_end","index":7,"status":"passed","duration":13.6,"summary":"analyze: Checking whether an error message is present","ordinal":18,"id":"2-7","kind":"analyze","screenshot":"screenshot.jpg","action_id":"a75295fb-5342-400e-866d-85672630c232","v":1,"ts":"2026-11-20T10:50:08.053Z"}
+{"type":"step_start","index":8,"objective":"Step 8","v":1,"ts":"2026-11-20T10:50:08.053Z"}
+{"type":"step_event","index":8,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:50:08.216Z"}
+{"type":"step_event","index":8,"event":"assertion","detail":"the page that opens does not show a 404, \"page not found\", or error message","passed":true,"v":1,"ts":"2026-11-20T10:50:08.217Z"}
+{"type":"step_end","index":8,"status":"passed","duration":0.2,"summary":"assert: the page that opens does not show a 404, \"page not found\", or error message","ordinal":19,"id":"2-8","kind":"assert","screenshot":"screenshot.jpg","action_id":"5623284e-7668-4e50-8fc3-5fdc13299fe1","v":1,"ts":"2026-11-20T10:50:08.218Z"}
+{"type":"run_end","run_id":"run-2","status":"passed","summary":"","reason":"replay completed","duration":56.31,"final_url":"https://webflow.com/","actions_executed":8,"screenshot_path":"/Users/ship/.testmuai/kaneai/sessions/4cdbc29c-d51c-4f08-9a10-d8b2b3958d7a/scratch/2/replay-test/screenshots/step_008.png","run_dir":"/Users/ship/.testmuai/kaneai/sessions/4cdbc29c-d51c-4f08-9a10-d8b2b3958d7a/scratch/2/replay-test","total_runs":1,"context":{"memory":{},"variables":{"page_404_absent":{"syntax":"{{page_404_absent}}","value":"false","secret":false},"page_not_found_absent":{"syntax":"{{page_not_found_absent}}","value":"false","secret":false},"error_message_absent":{"syntax":"{{error_message_absent}}","value":"false","secret":false}},"pointer":""},"variables_out":{"page_404_absent":{"syntax":"{{page_404_absent}}","value":"false","secret":false},"page_not_found_absent":{"syntax":"{{page_not_found_absent}}","value":"false","secret":false},"error_message_absent":{"syntax":"{{error_message_absent}}","value":"false","secret":false}},"store_out":{},"result_code":100,"reason_code":"success.complete","v":1,"ts":"2026-11-20T10:50:08.252Z"}
+{"type":"test_md_step_end","step_index":3,"status":"passed","duration_s":56.31,"ref_kind":null,"unit_kind":null,"inlined_count":null,"failed_sub_step_index":null,"v":1,"ts":"2026-11-20T10:50:08.252Z"}
+{"type":"test_md_step_start","step_index":4,"heading":"Step 4","ref":null,"v":1,"ts":"2026-11-20T10:50:08.252Z"}
+{"type":"run_start","objective":"From the Brewed products section at https://webflow-doctor-demo.webflow.io, click the Travel Press Buy button, then assert the page that opens does not show a 404, \"page not found\", or error message.","timestamp":1795171808,"environment":{"resolution":"1920x1080"},"v":1,"ts":"2026-11-20T10:50:08.256Z"}
+{"type":"step_event","index":0,"event":"replay_started","detail":"replaying 8 actions","recording_length":8,"v":1,"ts":"2026-11-20T10:50:08.257Z"}
+{"type":"step_start","index":1,"objective":"Step 1","v":1,"ts":"2026-11-20T10:50:08.258Z"}
+{"type":"step_event","index":1,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:50:08.395Z"}
+{"type":"step_event","index":1,"event":"action","detail":"Navigate to https://webflow-doctor-demo.webflow.io","action_type":"navigate","success":true,"v":1,"ts":"2026-11-20T10:50:08.614Z"}
+{"type":"step_event","index":1,"event":"reasoning","detail":"Navigate to https://webflow-doctor-demo.webflow.io","action_type":"navigate","v":1,"ts":"2026-11-20T10:50:08.614Z"}
+{"type":"step_end","index":1,"status":"passed","duration":0.4,"summary":"navigate: Navigate to https://webflow-doctor-demo.webflow.io","ordinal":20,"id":"3-1","kind":"navigate","screenshot":"screenshot.jpg","action_id":"bd740730-8eda-4afa-a3ec-89a3b7812e70","v":1,"ts":"2026-11-20T10:50:08.615Z"}
+{"type":"step_start","index":2,"objective":"Step 2","v":1,"ts":"2026-11-20T10:50:08.615Z"}
+{"type":"step_event","index":2,"event":"screenshot","detail":"https://webflow-doctor-demo.webflow.io/","v":1,"ts":"2026-11-20T10:50:08.746Z"}
+{"type":"step_event","index":2,"event":"action","detail":"Scrolling to the Travel Press Buy button","action_type":"scroll","success":true,"v":1,"ts":"2026-11-20T10:50:08.767Z"}
+{"type":"step_event","index":2,"event":"reasoning","detail":"Scrolling to the Travel Press Buy button","action_type":"scroll","v":1,"ts":"2026-11-20T10:50:08.767Z"}
+{"type":"step_end","index":2,"status":"passed","duration":0.2,"summary":"scroll: Scrolling to the Travel Press Buy button","ordinal":21,"id":"3-2","kind":"scroll","screenshot":"screenshot.jpg","action_id":"7f607919-6bba-4966-b60a-7e6ada2dd85c","v":1,"ts":"2026-11-20T10:50:08.964Z"}
+{"type":"step_start","index":3,"objective":"Step 3","v":1,"ts":"2026-11-20T10:50:08.964Z"}
+{"type":"step_event","index":3,"event":"screenshot","detail":"https://webflow-doctor-demo.webflow.io/","v":1,"ts":"2026-11-20T10:50:09.007Z"}
+{"type":"step_event","index":3,"event":"action","detail":"Clicking the Travel Press Buy button","action_type":"click","success":true,"v":1,"ts":"2026-11-20T10:50:10.658Z"}
+{"type":"step_event","index":3,"event":"reasoning","detail":"Clicking the Travel Press Buy button","action_type":"click","v":1,"ts":"2026-11-20T10:50:10.658Z"}
+{"type":"step_end","index":3,"status":"passed","duration":1.7,"summary":"click: Clicking the Travel Press Buy button","ordinal":22,"id":"3-3","kind":"click","screenshot":"screenshot.jpg","action_id":"20cac83f-2d1e-4014-9254-f6f23b4cf9e0","v":1,"ts":"2026-11-20T10:50:10.799Z"}
+{"type":"step_start","index":4,"objective":"Step 4","v":1,"ts":"2026-11-20T10:50:10.799Z"}
+{"type":"step_event","index":4,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:50:11.323Z"}
+{"type":"step_event","index":4,"event":"action","detail":"Waiting for the destination page to load","action_type":"wait","success":true,"v":1,"ts":"2026-11-20T10:50:17.115Z"}
+{"type":"step_event","index":4,"event":"reasoning","detail":"Waiting for the destination page to load","action_type":"wait","v":1,"ts":"2026-11-20T10:50:17.115Z"}
+{"type":"step_end","index":4,"status":"passed","duration":6.3,"summary":"wait: Waiting for the destination page to load","ordinal":23,"id":"3-4","kind":"wait","screenshot":"screenshot.jpg","action_id":"692e2581-c927-4899-a25c-ab265f225aa3","v":1,"ts":"2026-11-20T10:50:17.116Z"}
+{"type":"step_start","index":5,"objective":"Step 5","v":1,"ts":"2026-11-20T10:50:17.116Z"}
+{"type":"step_event","index":5,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:50:17.259Z"}
+{"type":"step_event","index":5,"event":"action","detail":"Checking whether a 404 page indicator is present","action_type":"analyze","success":true,"v":1,"ts":"2026-11-20T10:50:31.016Z"}
+{"type":"step_event","index":5,"event":"reasoning","detail":"Checking whether a 404 page indicator is present","action_type":"analyze","v":1,"ts":"2026-11-20T10:50:31.016Z"}
+{"type":"step_end","index":5,"status":"passed","duration":13.9,"summary":"analyze: Checking whether a 404 page indicator is present","ordinal":24,"id":"3-5","kind":"analyze","screenshot":"screenshot.jpg","action_id":"fbd7e01d-2f74-44d9-a4c5-10c1c09eae46","v":1,"ts":"2026-11-20T10:50:31.017Z"}
+{"type":"step_start","index":6,"objective":"Step 6","v":1,"ts":"2026-11-20T10:50:31.018Z"}
+{"type":"step_event","index":6,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:50:31.137Z"}
+{"type":"step_event","index":6,"event":"action","detail":"Checking whether the page-not-found text is present","action_type":"analyze","success":true,"v":1,"ts":"2026-11-20T10:50:44.010Z"}
+{"type":"step_event","index":6,"event":"reasoning","detail":"Checking whether the page-not-found text is present","action_type":"analyze","v":1,"ts":"2026-11-20T10:50:44.010Z"}
+{"type":"step_end","index":6,"status":"passed","duration":13,"summary":"analyze: Checking whether the page-not-found text is present","ordinal":25,"id":"3-6","kind":"analyze","screenshot":"screenshot.jpg","action_id":"943fdec7-14e2-410c-89b5-2bc5de7e42c9","v":1,"ts":"2026-11-20T10:50:44.012Z"}
+{"type":"step_start","index":7,"objective":"Step 7","v":1,"ts":"2026-11-20T10:50:44.012Z"}
+{"type":"step_event","index":7,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:50:44.137Z"}
+{"type":"step_event","index":7,"event":"action","detail":"Checking whether an error message is present","action_type":"analyze","success":true,"v":1,"ts":"2026-11-20T10:50:56.981Z"}
+{"type":"step_event","index":7,"event":"reasoning","detail":"Checking whether an error message is present","action_type":"analyze","v":1,"ts":"2026-11-20T10:50:56.981Z"}
+{"type":"step_end","index":7,"status":"passed","duration":13,"summary":"analyze: Checking whether an error message is present","ordinal":26,"id":"3-7","kind":"analyze","screenshot":"screenshot.jpg","action_id":"81c35f7a-af68-4aad-a2d4-ee76e5bb4701","v":1,"ts":"2026-11-20T10:50:56.983Z"}
+{"type":"step_start","index":8,"objective":"Step 8","v":1,"ts":"2026-11-20T10:50:56.983Z"}
+{"type":"step_event","index":8,"event":"screenshot","detail":"https://webflow.com/","v":1,"ts":"2026-11-20T10:50:57.120Z"}
+{"type":"step_event","index":8,"event":"assertion","detail":"the page that opens does not show a 404, \"page not found\", or error message","passed":true,"v":1,"ts":"2026-11-20T10:50:57.121Z"}
+{"type":"step_end","index":8,"status":"passed","duration":0.1,"summary":"assert: the page that opens does not show a 404, \"page not found\", or error message","ordinal":27,"id":"3-8","kind":"assert","screenshot":"screenshot.jpg","action_id":"ec7d90b8-c9a0-4d51-b0f8-f6d6b40a0f75","v":1,"ts":"2026-11-20T10:50:57.122Z"}
+{"type":"run_end","run_id":"run-3","status":"passed","summary":"","reason":"replay completed","duration":48.9,"final_url":"https://webflow.com/","actions_executed":8,"screenshot_path":"/Users/ship/.testmuai/kaneai/sessions/4cdbc29c-d51c-4f08-9a10-d8b2b3958d7a/scratch/3/replay-test/screenshots/step_008.png","run_dir":"/Users/ship/.testmuai/kaneai/sessions/4cdbc29c-d51c-4f08-9a10-d8b2b3958d7a/scratch/3/replay-test","total_runs":1,"context":{"memory":{},"variables":{"404_absent":{"syntax":"{{404_absent}}","value":"false","secret":false}},"pointer":""},"variables_out":{"404_absent":{"syntax":"{{404_absent}}","value":"false","secret":false}},"store_out":{},"result_code":100,"reason_code":"success.complete","v":1,"ts":"2026-11-20T10:50:57.155Z"}
+{"type":"test_md_step_end","step_index":4,"status":"passed","duration_s":48.9,"ref_kind":null,"unit_kind":null,"inlined_count":null,"failed_sub_step_index":null,"v":1,"ts":"2026-11-20T10:50:57.156Z"}
+{"type":"test_md_evidence_ingest","status":"ok","evidence_id":"437c95be-f35b-40b7-a3b2-60c59e43f77e","v":1,"ts":"2026-11-20T10:51:23.719Z"}
+{"type":"test_md_summary","overall_status":"passed","duration_s":159,"steps":{"total":4,"passed":4,"failed":0,"skipped":0,"replay_decisions":4,"author_decisions":0},"adaptive_heal":{"triggered":false},"commit":{"committed":false,"reason":"readonly_fallback"},"artifacts":{"replaced":false},"upload":{"performed":true,"succeeded":true},"cancelled":false,"v":1,"ts":"2026-11-20T10:51:23.722Z"}
+{"type":"coverage","status":"written","computed_by":"local","coverage_version":2,"scope":"run","pct":38,"usecases":{"total":3,"proven":1,"partial":0,"failing":0,"not_run":2,"not_designed":0,"no_criteria":0},"criteria":{"total":19,"proven":2},"this_run":{"usecases":["uc-1"],"criteria_passed":["ac-1","ac-2"],"criteria_failed":[]},"flags":{"stale_sources":0,"sources_not_fully_extracted":[],"orphaned_usecases":0},"pack":"/Users/ship/.testmuai/kaneai/sessions/4cdbc29c-d51c-4f08-9a10-d8b2b3958d7a/evidence/437c95be-f35b-40b7-a3b2-60c59e43f77e.evidence","v":1,"ts":"2026-11-20T10:51:23.729Z"}
+{"type":"test_md_done","overall_status":"passed","duration_s":159,"session_id":"4cdbc29c-d51c-4f08-9a10-d8b2b3958d7a","coverage":{"status":"written","pct":38},"v":1,"ts":"2026-11-20T10:51:23.730Z"}

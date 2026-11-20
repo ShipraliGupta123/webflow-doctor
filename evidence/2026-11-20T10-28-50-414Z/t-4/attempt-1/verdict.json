@@ -1,0 +1,93 @@
+{
+  "verdict": {
+    "accepted": true,
+    "reasons": [],
+    "checks": [
+      {
+        "rule": "1 target flow passes",
+        "passed": true,
+        "detail": "t-4 is pass"
+      },
+      {
+        "rule": "2 no regressions",
+        "passed": true,
+        "detail": "all still pass"
+      },
+      {
+        "rule": "3 tests unchanged",
+        "passed": true,
+        "detail": "hash matches"
+      },
+      {
+        "rule": "4 allow-listed, valid params",
+        "passed": true,
+        "detail": "ok"
+      },
+      {
+        "rule": "5 nothing removed",
+        "passed": true,
+        "detail": "ok"
+      },
+      {
+        "rule": "6 no special-casing of the test runner",
+        "passed": true,
+        "detail": "ok"
+      },
+      {
+        "rule": "7 within Kane run budget",
+        "passed": true,
+        "detail": "12/40 runs"
+      }
+    ]
+  },
+  "target": {
+    "status": "pass",
+    "durationMs": 83000,
+    "authorDecisions": 2,
+    "credits": 43.129239999999996,
+    "sessionId": "1daa395a-c12f-44ee-89e4-e61a1184e942",
+    "failedChecks": [],
+    "id": "t-4",
+    "name": "Hero image alt text",
+    "weight": 2,
+    "attempts": 1
+  },
+  "regression": [
+    {
+      "status": "pass",
+      "durationMs": 157000,
+      "authorDecisions": 0,
+      "credits": 0,
+      "sessionId": "c1cf6b6a-0e7a-4bed-99ae-530b52877264",
+      "failedChecks": [],
+      "id": "t-1",
+      "name": "Buy buttons reach a working page",
+      "weight": 3,
+      "attempts": 1
+    },
+    {
+      "status": "pass",
+      "durationMs": 10000,
+      "authorDecisions": 0,
+      "credits": 0,
+      "sessionId": "0fabb9ff-b4b3-428d-9591-a84441d71b24",
+      "failedChecks": [],
+      "id": "t-3",
+      "name": "Desktop hero and product listings",
+      "weight": 3,
+      "attempts": 1
+    },
+    {
+      "status": "pass",
+      "durationMs": 3000,
+      "authorDecisions": 0,
+      "credits": 0,
+      "sessionId": "045c51ab-755e-4dbe-a321-46ae8f311a2f",
+      "failedChecks": [],
+      "id": "t-5",
+      "name": "Footer contact email link",
+      "weight": 1,
+      "attempts": 1
+    }
+  ]
+}
