@@ -4,6 +4,8 @@
 - **Deadline: 19 Nov** (confirmed). Plan unchanged: feature freeze + submit Wed 18 Nov night, Thu 19 = buffer only.
 - **Credits:** 10,000 free per account, valid 1 month. Luma page says cached replays of passing tests cost 0 credits (not yet verified).
 - **Free plan covers everything we need** — `evidence verdict`, `evidence validate`, `--policy-id`, `context ingest` — confirmed in hackathon Slack by the TestMu team (16 Nov).
+- **18 Nov update:** official deadline moved to **27 Nov**. Our target stays early submission; 21–27 Nov is buffer only (fixes, re-record, resubmit — no new features).
+
 
 ## T0.2 — Kane CLI setup (16 Nov)
 - Installed `@testmuai/kane-cli` globally; logged in via `kane-cli login --oauth` (verified with `kane-cli whoami`).
