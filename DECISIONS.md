@@ -178,5 +178,15 @@
   does not override variables already set in the shell, so a stale exported token
   silently wins (cost us a confusing 401 after rotating the token).
 
+## M3 — Loop & gate (20 Nov)
+- Loop = PRD §7: fresh baseline → per failing flow: diagnose → plan → apply → publish →
+  wait until visible on staging → fresh Kane run of target + free replays of passing flows
+  → gate → accept or roll back. Final fresh run gives the after-score.
+- Gate = PRD §8, all 7 rules; Kane results decide rules 1–2. Anti-cheat hash covers step
+  bodies only (Kane `--author` rewrites frontmatter).
+- Waits until a fix is visible on the published page before re-running Kane (CMS: until the
+  old URL is gone, since the new URL already exists on other items).
+- First red→green: `evidence/2026-11-20T09-56-22-442Z/` — t-6 fixed, 36→55, 13 Kane runs.
+
 ## Stack
 - Node 20+ / TypeScript, Hono, vitest, Webflow Data API v2 via fetch, Anthropic SDK for fix planning — PRD defaults, no reason to swap.
