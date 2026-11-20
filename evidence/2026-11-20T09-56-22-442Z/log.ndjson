@@ -1,0 +1,9 @@
+{"ts":"2026-11-20T09:56:22.443Z","event":"loop_start","runId":"2026-11-20T09-56-22-442Z","suite":["t-1","t-3","t-4","t-5","t-6"],"testsHashAtStart":"36b1793bb59c7de739f25a14d4a11dad8c41ddac085e76a197c80615d03c3e18","maxKaneRuns":40}
+{"ts":"2026-11-20T09:59:57.501Z","event":"baseline_flow","id":"t-1","status":"fail","failedStep":4}
+{"ts":"2026-11-20T10:01:43.083Z","event":"baseline_flow","id":"t-3","status":"pass"}
+{"ts":"2026-11-20T10:03:09.102Z","event":"baseline_flow","id":"t-4","status":"fail","failedStep":2}
+{"ts":"2026-11-20T10:04:16.270Z","event":"baseline_flow","id":"t-5","status":"pass"}
+{"ts":"2026-11-20T10:04:52.765Z","event":"baseline_flow","id":"t-6","status":"fail","failedStep":1}
+{"ts":"2026-11-20T10:05:10.497Z","event":"fix_live","flow":"t-6","attempt":1,"plan":{"type":"PAGE_META","params":{"pageId":"6afb6f40015a6fa143a72dd0","title":"Brewed — small-batch coffee gear"},"rationale":"The title check captured document.title as 'Untitled' and the inventory shows the Home page seoTitle is 'Untitled', so the site really does serve the wrong tab title; this contradicts Kane's claim that no tab-title value was captured. Setting the Home page SEO title to 'Brewed — small-batch coffee gear' meets the requirement in the failing step."},"previous":"Untitled"}
+{"ts":"2026-11-20T10:06:23.857Z","event":"gate","flow":"t-6","attempt":1,"accepted":true,"reasons":[]}
+{"ts":"2026-11-20T10:14:27.226Z","event":"loop_done","runId":"2026-11-20T09-56-22-442Z","scoreBefore":36,"scoreAfter":55,"kaneRuns":13,"flows":[{"id":"t-1","name":"Buy buttons reach a working page","before":"fail","after":"fail"},{"id":"t-3","name":"Desktop hero and product listings","before":"pass","after":"pass"},{"id":"t-4","name":"Hero image alt text","before":"fail","after":"fail"},{"id":"t-5","name":"Footer contact email link","before":"pass","after":"pass"},{"id":"t-6","name":"Home page browser title","before":"fail","after":"pass"}]}

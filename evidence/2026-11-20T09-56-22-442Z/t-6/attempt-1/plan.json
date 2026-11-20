@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "plan": {
+    "type": "PAGE_META",
+    "params": {
+      "pageId": "6afb6f40015a6fa143a72dd0",
+      "title": "Brewed — small-batch coffee gear"
+    },
+    "rationale": "The title check captured document.title as 'Untitled' and the inventory shows the Home page seoTitle is 'Untitled', so the site really does serve the wrong tab title; this contradicts Kane's claim that no tab-title value was captured. Setting the Home page SEO title to 'Brewed — small-batch coffee gear' meets the requirement in the failing step."
+  },
+  "output": {
+    "fixType": "PAGE_META",
+    "assetId": "",
+    "altText": "",
+    "collectionId": "",
+    "itemId": "",
+    "field": "",
+    "url": "",
+    "pageId": "6afb6f40015a6fa143a72dd0",
+    "title": "Brewed — small-batch coffee gear",
+    "rationale": "The title check captured document.title as 'Untitled' and the inventory shows the Home page seoTitle is 'Untitled', so the site really does serve the wrong tab title; this contradicts Kane's claim that no tab-title value was captured. Setting the Home page SEO title to 'Brewed — small-batch coffee gear' meets the requirement in the failing step."
+  }
+}

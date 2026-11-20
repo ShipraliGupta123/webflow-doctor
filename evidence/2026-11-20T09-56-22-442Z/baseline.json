@@ -1,0 +1,112 @@
+{
+  "score": 36,
+  "flows": [
+    {
+      "status": "fail",
+      "durationMs": 168000,
+      "failedStep": 4,
+      "failureMessage": "Final verification failed: \"the page that opens does not show a 404, \"page not found\", or error message\"",
+      "diagnosis": {
+        "confirmedSiteBug": true,
+        "bugTitle": "Travel Press Buy link opens a 404 page",
+        "family": "application_issue",
+        "category": "navigation_defect",
+        "confidence": 0.99,
+        "rootCause": "The Travel Press Buy button is configured to open a Webflow URL that no longer exists.",
+        "suggestion": "Update the Travel Press Buy button to the intended live product or checkout page, then verify that the destination loads successfully."
+      },
+      "authorDecisions": 1,
+      "credits": 81.8285325,
+      "sessionId": "f36b2419-e8e0-4db9-8076-55b325b62b3c",
+      "failedChecks": [
+        {
+          "query": "the page that opens does not show an error message",
+          "expected": "false",
+          "actual": "true",
+          "analyzer": "visual"
+        }
+      ],
+      "id": "t-1",
+      "name": "Buy buttons reach a working page",
+      "weight": 3,
+      "attempts": 1
+    },
+    {
+      "status": "pass",
+      "durationMs": 76000,
+      "authorDecisions": 0,
+      "credits": 35.626255,
+      "sessionId": "af10468b-caea-4715-a17b-69c5994c051f",
+      "failedChecks": [],
+      "id": "t-3",
+      "name": "Desktop hero and product listings",
+      "weight": 3,
+      "attempts": 1
+    },
+    {
+      "status": "fail",
+      "durationMs": 76000,
+      "failedStep": 2,
+      "failureMessage": "The DOM extraction confirmed the hero image alt attribute is empty, so the required assertion cannot pass.",
+      "diagnosis": {
+        "confirmedSiteBug": true,
+        "bugTitle": "Hero image has empty alt text",
+        "family": "application_issue",
+        "category": "ui_data_defect",
+        "confidence": 0.96,
+        "rootCause": "The hero image’s alt attribute is empty even though the image contains meaningful visual content.",
+        "suggestion": "Add a clear, descriptive alt text to the home-page hero image and rerun the accessibility check."
+      },
+      "authorDecisions": 2,
+      "credits": 27.944377499999998,
+      "sessionId": "cffb2f98-415a-4f91-9c72-9cb653c7b49b",
+      "failedChecks": [],
+      "id": "t-4",
+      "name": "Hero image alt text",
+      "weight": 2,
+      "attempts": 1
+    },
+    {
+      "status": "pass",
+      "durationMs": 46000,
+      "authorDecisions": 0,
+      "credits": 30.525937499999998,
+      "sessionId": "fdd4c9d0-c570-4c7c-acdd-8187a3e881f8",
+      "failedChecks": [],
+      "id": "t-5",
+      "name": "Footer contact email link",
+      "weight": 1,
+      "attempts": 1
+    },
+    {
+      "status": "fail",
+      "durationMs": 28000,
+      "failedStep": 1,
+      "failureMessage": "Final verification failed: \"the browser tab title (document.title) is 'Brewed — small-batch coffee gear'\"",
+      "diagnosis": {
+        "confirmedSiteBug": false,
+        "bugTitle": "Unverified browser-title expectation",
+        "family": "automation_bug",
+        "category": "config_issue",
+        "confidence": 0.89,
+        "rootCause": "The test expected a specific tab title without providing any captured tab-title value to show that the website returned the wrong one. The visible page heading cannot be used to confirm the tab title.",
+        "suggestion": "Capture and report document.title during the check, then update the expected value only if it is meant to match the deployed page title."
+      },
+      "authorDecisions": 1,
+      "credits": 22.349874999999997,
+      "sessionId": "1303251b-c952-4c06-a0c1-0da6df830478",
+      "failedChecks": [
+        {
+          "query": "the browser tab title (document.title) is 'Brewed — small-batch coffee gear'",
+          "expected": "Brewed — small-batch coffee gear",
+          "actual": "Untitled",
+          "analyzer": "title"
+        }
+      ],
+      "id": "t-6",
+      "name": "Home page browser title",
+      "weight": 2,
+      "attempts": 1
+    }
+  ]
+}
